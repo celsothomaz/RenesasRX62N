@@ -1,0 +1,2592 @@
+Archive member included because of file (symbol)
+
+libRenesasRX62N.a(memcmp.o)   ./src/sw/FreeRTOS/tasks.o (memcmp)
+libRenesasRX62N.a(memcpy.o)   ./src/sw/FreeTCPIP/psock.o (memcpy)
+libRenesasRX62N.a(memset.o)   ./src/sw/task/IntQueue.o (memset)
+libRenesasRX62N.a(sprintf.o)  ./src/sw/webserver/httpd-cgi.o (sprintf)
+libRenesasRX62N.a(strchr.o)   ./src/sw/webserver/httpd-cgi.o (strchr)
+libRenesasRX62N.a(strcpy.o)   ./src/sw/FreeTCPIP/apps/httpd/httpd.o (strcpy)
+libRenesasRX62N.a(strlen.o)   ./src/sw/webserver/httpd-cgi.o (strlen)
+libRenesasRX62N.a(strncmp.o)  ./src/sw/webserver/httpd-cgi.o (strncmp)
+libRenesasRX62N.a(strncpy.o)  ./src/sw/FreeTCPIP/apps/httpd/httpd.o (strncpy)
+libRenesasRX62N.a(strrchr.o)  ./src/sw/FreeTCPIP/apps/httpd/httpd.o (strrchr)
+libRenesasRX62N.a(strstr.o)   ./src/sw/task/uIP_Task.o (strstr)
+libRenesasRX62N.a(frmwri.o)   libRenesasRX62N.a(sprintf.o) (_formatted_write)
+
+Allocating common symbols
+Common symbol       size              file
+
+j                   0x4               ./src/fw/TMR/fw_tmr2.o
+i                   0x4               ./src/fw/TMR/fw_tmr2.o
+xMediumPriorityTask
+                    0x4               ./src/sw/task/QPeek.o
+auxData             0x1               ./src/mainl.o
+uip_conn            0x4               ./src/sw/FreeTCPIP/uip.o
+pcStatus            0x4               ./src/sw/webserver/httpd-cgi.o
+uip_len             0x2               ./src/sw/FreeTCPIP/uip.o
+uip_draddr          0x4               ./src/sw/FreeTCPIP/uip.o
+xHighPriorityNormallyFullTask1
+                    0x4               ./src/sw/task/IntQueue.o
+k                   0x1               ./src/fw/TMR/fw_tmr2.o
+fw_glcd_display     0x300             ./src/fw/GLCD/fw_glcd.o
+uip_slen            0x2               ./src/sw/FreeTCPIP/uip.o
+xHighestPriorityTask
+                    0x4               ./src/sw/task/QPeek.o
+uip_stat            0x38              ./src/sw/FreeTCPIP/uip.o
+uip_listenports     0x50              ./src/sw/FreeTCPIP/uip.o
+uip_flags           0x1               ./src/sw/FreeTCPIP/uip.o
+uip_sappdata        0x4               ./src/sw/FreeTCPIP/uip.o
+uip_conns           0x1fe0            ./src/sw/FreeTCPIP/uip.o
+uip_appdata         0x4               ./src/sw/FreeTCPIP/uip.o
+uip_hostaddr        0x4               ./src/sw/FreeTCPIP/uip.o
+uip_netmask         0x4               ./src/sw/FreeTCPIP/uip.o
+xHighPriorityTask   0x4               ./src/sw/task/QPeek.o
+xHighPriorityNormallyEmptyTask2
+                    0x4               ./src/sw/task/IntQueue.o
+xHighPriorityNormallyFullTask2
+                    0x4               ./src/sw/task/IntQueue.o
+xHighPriorityNormallyEmptyTask1
+                    0x4               ./src/sw/task/IntQueue.o
+ulString            0x4               ./src/sw/webserver/httpd-cgi.o
+uip_acc32           0x4               ./src/sw/FreeTCPIP/uip.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+
+.fvectors       0xffffff80       0x80
+ *(.fvectors)
+ .fvectors      0xffffff80       0x80 ./src/fw/vects.o
+                0xffffff80                HardwareVectors
+
+.text           0xfff80000     0xf5c8
+ *(.text)
+ .text          0xfff80000       0x4f ./src/fw/start.o
+                0xfff80000                start
+ *(.text.*)
+ *(P)
+ *fill*         0xfff8004f        0x1 00
+ P              0xfff80050      0x6ca ./src/sw/webserver/EMAC.o
+                0xfff80050                vInitEmac
+                0xfff8008c                vEMACWrite
+                0xfff8018d                ulEMACRead
+                0xfff80233                lEMACWaitForLink
+                0xfff80690                vEMAC_ISR_Handler
+ P              0xfff8071a      0x66e ./src/sw/webserver/httpd-cgi.o
+                0xfff80741                httpd_cgi
+ P              0xfff80d88      0x4c0 ./src/sw/webserver/phy.o
+                0xfff80d88                phy_init
+                0xfff80ddf                phy_set_100full
+                0xfff80df0                phy_set_10half
+                0xfff80dff                phy_set_autonegotiate
+                0xfff80ed7                _phy_read
+                0xfff80f09                _phy_write
+                0xfff80f31                _phy_preamble
+                0xfff80f57                _phy_reg_set
+                0xfff80fcf                _phy_reg_read
+                0xfff81092                _phy_reg_write
+                0xfff810cf                _phy_ta_z0
+                0xfff81147                _phy_ta_10
+                0xfff81156                _phy_mii_write_1
+                0xfff811cf                _phy_mii_write_0
+ P              0xfff81248      0x334 ./src/sw/task/BlockQ.o
+                0xfff81248                vStartBlockingQueueTasks
+                0xfff814de                xAreBlockingQueuesStillRunning
+ P              0xfff8157c      0x620 ./src/sw/task/GenQTest.o
+                0xfff8157c                vStartGenericQueueTasks
+                0xfff81b2b                xAreGenericQueueTasksStillRunning
+ P              0xfff81b9c      0xbfc ./src/sw/task/IntQueue.o
+                0xfff81b9c                vStartInterruptQueueTasks
+                0xfff8228d                xFirstTimerHandler
+                0xfff82430                xSecondTimerHandler
+                0xfff826de                xAreIntQueueTasksStillRunning
+ P              0xfff82798      0x1aa ./src/sw/task/PollQ.o
+                0xfff82798                vStartPolledQueueTasks
+                0xfff828fb                xArePollingQueuesStillRunning
+ P              0xfff82942      0x440 ./src/sw/task/QPeek.o
+                0xfff82942                vStartQueuePeekTasks
+                0xfff82d3d                xAreQueuePeekTasksStillRunning
+ P              0xfff82d82      0x592 ./src/sw/task/blocktim.o
+                0xfff82d82                vCreateBlockTimeTasks
+                0xfff832a7                xAreBlockTimeTestTasksStillRunning
+ P              0xfff83314       0xaa ./src/sw/task/flash.o
+                0xfff83314                vStartLEDFlashTasks
+ P              0xfff833be      0x4ea ./src/sw/task/flop.o
+                0xfff833be                vStartMathTasks
+                0xfff83849                xAreMathsTaskStillRunning
+ P              0xfff838a8       0xfc ./src/sw/task/integer.o
+                0xfff838a8                vStartIntegerMathTasks
+                0xfff8395e                xAreIntegerMathsTaskStillRunning
+ P              0xfff839a4      0x38a ./src/sw/task/recmutex.o
+                0xfff839a4                vStartRecursiveMutexTasks
+                0xfff83c7d                xAreRecursiveMutexTasksStillRunning
+ P              0xfff83d2e      0x2dc ./src/sw/task/semtest.o
+                0xfff83d2e                vStartSemaphoreTasks
+                0xfff83fa9                xAreSemaphoreTasksStillRunning
+ P              0xfff8400a       0xa6 ./src/sw/task/sw_task_glcd.o
+                0xfff8400a                sw_task_glcd
+                0xfff84076                sw_mont_glcd_screen_0
+                0xfff84093                sw_mont_glcd_screen_1
+ P              0xfff840b0      0x3f6 ./src/sw/task/uIP_Task.o
+                0xfff840b0                clock_time
+                0xfff840c3                vuIP_Task
+                0xfff8440f                vApplicationProcessFormInput
+ P              0xfff844a6      0x262 ./src/sw/MemMang/heap_2.o
+                0xfff844a6                pvPortMalloc
+                0xfff84610                vPortFree
+                0xfff84697                xPortGetFreeHeapSize
+                0xfff846ac                vPortInitialiseBlocks
+ P              0xfff84708      0x60a ./src/sw/FreeTCPIP/psock.o
+                0xfff849e9                psock_send
+                0xfff84a67                psock_generator_send
+                0xfff84b05                psock_datalen
+                0xfff84b24                psock_newdata
+                0xfff84b71                psock_readto
+                0xfff84c25                psock_readbuf
+                0xfff84cd9                psock_init
+ P              0xfff84d12       0x99 ./src/sw/FreeTCPIP/timer.o
+                0xfff84d12                timer_set
+                0xfff84d32                timer_reset
+                0xfff84d4d                timer_restart
+                0xfff84d63                timer_expired
+                0xfff84d89                timer_remaining
+ *fill*         0xfff84dab        0x1 00
+ P              0xfff84dac     0x2230 ./src/sw/FreeTCPIP/uip.o
+                0xfff84dac                uip_setipid
+                0xfff84dc2                uip_add32
+                0xfff84f7e                uip_chksum
+                0xfff84fa9                uip_ipchksum
+                0xfff85071                uip_tcpchksum
+                0xfff85087                uip_udpchksum
+                0xfff8509e                uip_init
+                0xfff8513e                uip_connect
+                0xfff852eb                uip_unlisten
+                0xfff85359                uip_listen
+                0xfff85432                uip_process
+                0xfff86f15                htons
+                0xfff86f31                htonl
+                0xfff86f6c                uip_send
+ P              0xfff86fdc      0x8dc ./src/sw/FreeTCPIP/uip_arp.o
+                0xfff86fdc                uip_arp_init
+                0xfff8702d                uip_arp_timer
+                0xfff872ff                uip_arp_arpin
+                0xfff87537                uip_arp_out
+ P              0xfff878b8        0x0 ./src/sw/FreeTCPIP/apps/httpd/http-strings.o
+ P              0xfff878b8      0x162 ./src/sw/FreeTCPIP/apps/httpd/httpd-fs.o
+                0xfff87921                httpd_fs_open
+                0xfff8799d                httpd_fs_init
+                0xfff879c5                httpd_fs_count
+ P              0xfff87a1a      0xa94 ./src/sw/FreeTCPIP/apps/httpd/httpd.o
+                0xfff883b3                httpd_appcall
+                0xfff8849f                httpd_init
+ P              0xfff884ae      0x4ae ./src/sw/FreeRTOS/croutine.o
+                0xfff884ae                xCoRoutineCreate
+                0xfff88593                vCoRoutineAddToDelayedList
+                0xfff887de                vCoRoutineSchedule
+                0xfff88905                xCoRoutineRemoveFromEventList
+ P              0xfff8895c      0x190 ./src/sw/FreeRTOS/list.o
+                0xfff8895c                vListInitialise
+                0xfff88991                vListInitialiseItem
+                0xfff889a9                vListInsertEnd
+                0xfff88a08                vListInsert
+                0xfff88a8a                uxListRemove
+ P              0xfff88aec      0xaf6 ./src/sw/FreeRTOS/queue.o
+                0xfff88aec                xQueueGenericReset
+                0xfff88ba9                xQueueGenericCreate
+                0xfff88c33                xQueueCreateMutex
+                0xfff88cbb                xQueueGiveMutexRecursive
+                0xfff88d1b                xQueueTakeMutexRecursive
+                0xfff88d87                xQueueGenericSend
+                0xfff88edd                xQueueGenericSendFromISR
+                0xfff88f99                xQueueGenericReceive
+                0xfff8916f                xQueueReceiveFromISR
+                0xfff8922f                uxQueueMessagesWaiting
+                0xfff89261                uxQueueMessagesWaitingFromISR
+                0xfff8928b                vQueueDelete
+                0xfff892bd                ucQueueGetQueueNumber
+                0xfff892d8                vQueueSetQueueNumber
+                0xfff892ee                ucQueueGetQueueType
+                0xfff894f5                xQueueIsQueueEmptyFromISR
+                0xfff89555                xQueueIsQueueFullFromISR
+                0xfff89587                vQueueWaitForMessageRestricted
+ P              0xfff895e2     0x18d8 ./src/sw/FreeRTOS/tasks.o
+                0xfff895e2                xTaskGenericCreate
+                0xfff897b3                vTaskDelete
+                0xfff89863                vTaskDelayUntil
+                0xfff8992b                vTaskDelay
+                0xfff89989                uxTaskPriorityGet
+                0xfff899c4                vTaskPrioritySet
+                0xfff89af7                vTaskSuspend
+                0xfff89ba5                xTaskIsTaskSuspended
+                0xfff89bf7                vTaskResume
+                0xfff89ca1                xTaskResumeFromISR
+                0xfff89d63                vTaskStartScheduler
+                0xfff89dd0                vTaskEndScheduler
+                0xfff89deb                vTaskSuspendAll
+                0xfff89e05                xTaskResumeAll
+                0xfff89f35                xTaskGetTickCount
+                0xfff89f5b                xTaskGetTickCountFromISR
+                0xfff89f8a                uxTaskGetNumberOfTasks
+                0xfff89f9f                vTaskList
+                0xfff8a083                vTaskGetRunTimeStats
+                0xfff8a18d                vTaskIncrementTick
+                0xfff8a323                vTaskSwitchContext
+                0xfff8a483                vTaskPlaceOnEventList
+                0xfff8a4f9                vTaskPlaceOnEventListRestricted
+                0xfff8a54f                xTaskRemoveFromEventList
+                0xfff8a607                vTaskSetTimeOutState
+                0xfff8a636                xTaskCheckForTimeOut
+                0xfff8a6e1                vTaskMissedYield
+                0xfff8a6f5                uxTaskGetTaskNumber
+                0xfff8a725                vTaskSetTaskNumber
+                0xfff8ac56                uxTaskGetStackHighWaterMark
+                0xfff8acba                xTaskGetCurrentTaskHandle
+                0xfff8acd8                xTaskGetSchedulerState
+                0xfff8ad0f                vTaskPriorityInherit
+                0xfff8adcf                vTaskPriorityDisinherit
+                0xfff8ae4f                vTaskEnterCritical
+                0xfff8ae75                vTaskExitCritical
+ P              0xfff8aeba      0x61c ./src/sw/FreeRTOS/timers.o
+                0xfff8aeba                xTimerCreateTimerTask
+                0xfff8af10                xTimerCreate
+                0xfff8af83                xTimerGenericCommand
+                0xfff8b485                xTimerIsTimerActive
+                0xfff8b4b8                pvTimerGetTimerID
+ P              0xfff8b4d6      0x17e ./src/sw/FreeRTOS/port/port.o
+                0xfff8b4d6                pxPortInitialiseStack
+                0xfff8b53f                xPortStartScheduler
+                0xfff8b58b                vPortEndScheduler
+                0xfff8b5b3                vSoftwareInterruptISR
+                0xfff8b613                vTickISR
+                0xfff8b635                ulPortGetIPL
+                0xfff8b63f                vPortSetIPL
+ P              0xfff8b654      0x11e ./src/HighFrequencyTimerTest.o
+                0xfff8b654                vSetupHighFrequencyTimer
+                0xfff8b6da                vTimer2_ISR_Handler
+ P              0xfff8b772      0x16a ./src/IntQueueTimer.o
+                0xfff8b772                vInitialiseTimerForIntQueueTest
+                0xfff8b897                vT0_1_ISR_Handler
+                0xfff8b8ba                vT2_3_ISR_Handler
+ P              0xfff8b8dc      0x4aa ./src/mainl.o
+                0xfff8b8dc                main
+                0xfff8bb8e                vApplicationSetupTimerInterrupt
+                0xfff8bbef                vApplicationMallocFailedHook
+                0xfff8bbf6                vApplicationStackOverflowHook
+                0xfff8bc04                vApplicationIdleHook
+                0xfff8bc51                pcGetTaskStatusMessage
+ P              0xfff8bd86       0x92 ./src/fw/fw_setup.o
+                0xfff8bd86                fw_setup
+ P              0xfff8be18        0x7 ./src/fw/hwinit.o
+                0xfff8be18                hw_initialise
+ P              0xfff8be1f       0x44 ./src/fw/hwsetup.o
+                0xfff8be1f                HardwareSetup
+ P              0xfff8be63      0x450 ./src/fw/inthandler.o
+                0xfff8be63                INT_Excep_SuperVisorInst
+                0xfff8be6b                INT_Excep_UndefinedInst
+                0xfff8be74                INT_Excep_FloatingPoint
+                0xfff8be7c                INT_NonMaskableInterrupt
+                0xfff8be84                Dummy
+                0xfff8be8c                INT_Excep_BRK
+                0xfff8be94                INT_Excep_BUSERR
+                0xfff8be9c                INT_Excep_FCU_FCUERR
+                0xfff8bea4                INT_Excep_FCU_FRDYI
+                0xfff8beac                INT_Excep_CMTU0_CMT0
+                0xfff8beb4                INT_Excep_CMTU0_CMT1
+                0xfff8bebc                INT_Excep_CMTU1_CMT2
+                0xfff8bec4                INT_Excep_CMTU1_CMT3
+                0xfff8becc                INT_Excep_IRQ0
+                0xfff8bed4                INT_Excep_IRQ1
+                0xfff8bedc                INT_Excep_IRQ2
+                0xfff8bee4                INT_Excep_IRQ3
+                0xfff8beec                INT_Excep_IRQ4
+                0xfff8bef4                INT_Excep_IRQ5
+                0xfff8befc                INT_Excep_IRQ6
+                0xfff8bf04                INT_Excep_IRQ7
+                0xfff8bf0c                INT_Excep_IRQ8
+                0xfff8bf14                INT_Excep_IRQ9
+                0xfff8bf1c                INT_Excep_IRQ10
+                0xfff8bf24                INT_Excep_IRQ11
+                0xfff8bf2c                INT_Excep_IRQ12
+                0xfff8bf34                INT_Excep_IRQ13
+                0xfff8bf3c                INT_Excep_IRQ14
+                0xfff8bf44                INT_Excep_IRQ15
+                0xfff8bf4c                INT_Excep_WDT_WOVI
+                0xfff8bf54                INT_Excep_AD0_ADI0
+                0xfff8bf5c                INT_Excep_AD1_ADI1
+                0xfff8bf64                INT_Excep_AD2_ADI2
+                0xfff8bf6c                INT_Excep_AD3_ADI3
+                0xfff8bf74                INT_Excep_TPU0_TGI0A
+                0xfff8bf7c                INT_Excep_TPU0_TGI0B
+                0xfff8bf84                INT_Excep_TPU0_TGI0C
+                0xfff8bf8c                INT_Excep_TPU0_TGI0D
+                0xfff8bf94                INT_Excep_TPU0_TCI0V
+                0xfff8bf9c                INT_Excep_TPU1_TGI1A
+                0xfff8bfa4                INT_Excep_TPU1_TGI1B
+                0xfff8bfac                INT_Excep_TPU1_TCI1V
+                0xfff8bfb4                INT_Excep_TPU1_TCI1U
+                0xfff8bfbc                INT_Excep_TPU2_TGI2A
+                0xfff8bfc4                INT_Excep_TPU2_TGI2B
+                0xfff8bfcc                INT_Excep_TPU2_TCI2V
+                0xfff8bfd4                INT_Excep_TPU2_TCI2U
+                0xfff8bfdc                INT_Excep_TPU3_TGI3A
+                0xfff8bfe4                INT_Excep_TPU3_TGI3B
+                0xfff8bfec                INT_Excep_TPU3_TGI3C
+                0xfff8bff4                INT_Excep_TPU3_TGI3D
+                0xfff8bffc                INT_Excep_TPU3_TCI3V
+                0xfff8c004                INT_Excep_TPU4_TGI4A
+                0xfff8c00c                INT_Excep_TPU4_TGI4B
+                0xfff8c014                INT_Excep_TPU4_TCI4V
+                0xfff8c01c                INT_Excep_TPU4_TCI4U
+                0xfff8c024                INT_Excep_TPU5_TGI5A
+                0xfff8c02c                INT_Excep_TPU5_TGI5B
+                0xfff8c034                INT_Excep_TPU5_TCI5V
+                0xfff8c03c                INT_Excep_TPU5_TCI5U
+                0xfff8c044                INT_Excep_TPU6_TGI6A
+                0xfff8c04c                INT_Excep_TPU6_TGI6B
+                0xfff8c054                INT_Excep_TPU6_TGI6C
+                0xfff8c05c                INT_Excep_TPU6_TGI6D
+                0xfff8c064                INT_Excep_TPU6_TCI6V
+                0xfff8c06c                INT_Excep_TPU7_TGI7A
+                0xfff8c074                INT_Excep_TPU7_TGI7B
+                0xfff8c07c                INT_Excep_TPU7_TCI7V
+                0xfff8c084                INT_Excep_TPU7_TCI7U
+                0xfff8c08c                INT_Excep_TPU8_TGI8A
+                0xfff8c094                INT_Excep_TPU8_TGI8B
+                0xfff8c09c                INT_Excep_TPU8_TCI8V
+                0xfff8c0a4                INT_Excep_TPU8_TCI8U
+                0xfff8c0ac                INT_Excep_TPU9_TGI9A
+                0xfff8c0b4                INT_Excep_TPU9_TGI9B
+                0xfff8c0bc                INT_Excep_TPU9_TGI9C
+                0xfff8c0c4                INT_Excep_TPU9_TGI9D
+                0xfff8c0cc                INT_Excep_TPU9_TCI9V
+                0xfff8c0d4                INT_Excep_TPU10_TGI10A
+                0xfff8c0dc                INT_Excep_TPU10_TGI10B
+                0xfff8c0e4                INT_Excep_TPU10_TCI10V
+                0xfff8c0ec                INT_Excep_TPU10_TCI10U
+                0xfff8c0f4                INT_Excep_TPU11_TGI11A
+                0xfff8c0fc                INT_Excep_TPU11_TGI11B
+                0xfff8c104                INT_Excep_TPU11_TCI11V
+                0xfff8c10c                INT_Excep_TPU11_TCI11U
+                0xfff8c114                INT_Excep_TMR0_CMI0A
+                0xfff8c11c                INT_Excep_TMR0_CMI0B
+                0xfff8c124                INT_Excep_TMR0_OV0I
+                0xfff8c12c                INT_Excep_TMR1_CMI1A
+                0xfff8c134                INT_Excep_TMR1_CMI1B
+                0xfff8c13c                INT_Excep_TMR1_OV1I
+                0xfff8c144                INT_Excep_TMR2_CMI2A
+                0xfff8c14c                INT_Excep_TMR2_CMI2B
+                0xfff8c154                INT_Excep_TMR2_OV2I
+                0xfff8c15c                INT_Excep_TMR3_CMI3A
+                0xfff8c164                INT_Excep_TMR3_CMI3B
+                0xfff8c16c                INT_Excep_TMR3_OV3I
+                0xfff8c174                INT_Excep_DMAC_DMTEND0
+                0xfff8c17b                INT_Excep_DMAC_DMTEND1
+                0xfff8c183                INT_Excep_DMAC_DMTEND2
+                0xfff8c18b                INT_Excep_DMAC_DMTEND3
+                0xfff8c193                INT_Excep_SCI0_ERI0
+                0xfff8c19b                INT_Excep_SCI0_RXI0
+                0xfff8c1a3                INT_Excep_SCI0_TXI0
+                0xfff8c1ab                INT_Excep_SCI0_TEI0
+                0xfff8c1b3                INT_Excep_SCI1_ERI1
+                0xfff8c1bb                INT_Excep_SCI1_RXI1
+                0xfff8c1c3                INT_Excep_SCI1_TXI1
+                0xfff8c1cb                INT_Excep_SCI1_TEI1
+                0xfff8c1d3                INT_Excep_SCI2_ERI2
+                0xfff8c1db                INT_Excep_SCI2_RXI2
+                0xfff8c1e3                INT_Excep_SCI2_TXI2
+                0xfff8c1eb                INT_Excep_SCI2_TEI2
+                0xfff8c1f3                INT_Excep_SCI3_ERI3
+                0xfff8c1fb                INT_Excep_SCI3_RXI3
+                0xfff8c203                INT_Excep_SCI3_TXI3
+                0xfff8c20b                INT_Excep_SCI3_TEI3
+                0xfff8c213                INT_Excep_SCI4_ERI4
+                0xfff8c21b                INT_Excep_SCI4_RXI4
+                0xfff8c223                INT_Excep_SCI4_TXI4
+                0xfff8c22b                INT_Excep_SCI4_TEI4
+                0xfff8c233                INT_Excep_SCI5_ERI5
+                0xfff8c23b                INT_Excep_SCI5_RXI5
+                0xfff8c243                INT_Excep_SCI5_TXI5
+                0xfff8c24b                INT_Excep_SCI5_TEI5
+                0xfff8c253                INT_Excep_SCI6_ERI6
+                0xfff8c25b                INT_Excep_SCI6_RXI6
+                0xfff8c263                INT_Excep_SCI6_TXI6
+                0xfff8c26b                INT_Excep_SCI6_TEI6
+                0xfff8c273                INT_Excep_RIIC0_EEI0
+                0xfff8c27b                INT_Excep_RIIC0_RXI0
+                0xfff8c283                INT_Excep_RIIC0_TXI0
+                0xfff8c28b                INT_Excep_RIIC0_TEI0
+                0xfff8c293                INT_Excep_RIIC1_EEI1
+                0xfff8c29b                INT_Excep_RIIC1_RXI1
+                0xfff8c2a3                INT_Excep_RIIC1_TXI1
+                0xfff8c2ab                INT_Excep_RIIC1_TEI1
+ P              0xfff8c2b3        0x0 ./src/fw/start.o
+ P              0xfff8c2b3        0x0 ./src/fw/vects.o
+ P              0xfff8c2b3      0x184 ./src/fw/TMR/fw_tmr0.o
+                0xfff8c2b3                fw_tmr0_init
+                0xfff8c3f8                fw_tmr0_handle_CMIA0
+                0xfff8c40d                fw_tmr0_handle_CMIB0
+                0xfff8c422                fw_tmr0_handle_OVI0
+ P              0xfff8c437      0x15b ./src/fw/TMR/fw_tmr1.o
+                0xfff8c437                fw_tmr1_init
+                0xfff8c553                fw_tmr1_handle_CMIA0
+                0xfff8c568                fw_tmr1_handle_CMIB0
+                0xfff8c57d                fw_tmr1_handle_OVI0
+ P              0xfff8c592      0x382 ./src/fw/TMR/fw_tmr2.o
+                0xfff8c592                fw_tmr2_init
+                0xfff8c6d7                fw_tmr2_handle_CMIA0
+                0xfff8c8e9                fw_tmr2_handle_CMIB0
+                0xfff8c8fe                fw_tmr2_handle_OVI0
+ P              0xfff8c914       0x4e ./src/fw/SWINT/fw_swint.o
+                0xfff8c914                fw_swint_init
+                0xfff8c949                fw_swint_handle
+ P              0xfff8c962       0x28 ./src/fw/SW/fw_sw.o
+                0xfff8c962                fw_sw_init
+ P              0xfff8c98a      0x3f2 ./src/fw/SPI/fw_spi.o
+                0xfff8c98a                fw_spi_init
+                0xfff8cd26                fw_spi_send_short
+ P              0xfff8cd7c      0x170 ./src/fw/SCI/fw_sci2.o
+                0xfff8cd7c                fw_sci2_init
+                0xfff8ce3f                transmit_data
+                0xfff8ce76                transmit_text
+                0xfff8ceb1                receive_data
+ P              0xfff8ceec      0x25f ./src/fw/LED/fw_led.o
+                0xfff8ceec                fw_led_init
+ P              0xfff8d14b       0xa9 ./src/fw/IRQ/fw_irq10.o
+                0xfff8d14b                fw_irq10_init
+                0xfff8d1b6                fw_irq10_handle
+ P              0xfff8d1f4       0x8d ./src/fw/IRQ/fw_irq15.o
+                0xfff8d1f4                fw_irq15_init
+                0xfff8d26c                fw_irq15_handle
+ *fill*         0xfff8d281        0x1 00
+ P              0xfff8d282       0xd6 ./src/fw/IRQ/fw_irq8.o
+                0xfff8d282                fw_irq8_init
+                0xfff8d2ed                fw_irq8_handle
+ P              0xfff8d358       0xa7 ./src/fw/IRQ/fw_irq9.o
+                0xfff8d358                fw_irq9_init
+                0xfff8d3c3                fw_irq9_handle
+ P              0xfff8d3ff        0x0 ./src/fw/GLCD/font_8x16.o
+ P              0xfff8d3ff        0x0 ./src/fw/GLCD/font_8x8.o
+ P              0xfff8d3ff        0x0 ./src/fw/GLCD/font_bitmap.o
+ P              0xfff8d3ff        0x0 ./src/fw/GLCD/font_helvr10.o
+ P              0xfff8d3ff        0x0 ./src/fw/GLCD/font_winfreesystem14x16.o
+ P              0xfff8d3ff        0x0 ./src/fw/GLCD/font_x5x7.o
+ P              0xfff8d3ff        0x0 ./src/fw/GLCD/font_x6x13.o
+ *fill*         0xfff8d3ff        0x1 00
+ P              0xfff8d400      0x37c ./src/fw/GLCD/fw_glcd.o
+                0xfff8d400                fw_glcd_init
+                0xfff8d491                fw_glcd_send_command
+                0xfff8d4d1                fw_glcd_send_data
+                0xfff8d511                fw_glcd_refresh
+                0xfff8d563                fw_glcd_set_xy
+                0xfff8d5a3                fw_glcd_clean
+                0xfff8d5f9                fw_glcd_input
+                0xfff8d6d7                fw_glcd_next_line
+                0xfff8d713                fw_glcd_line
+                0xfff8d72f                fw_glcd_colun
+                0xfff8d74d                fw_glcd_text
+ P              0xfff8d77c      0x1ee ./src/fw/ETH/fw_eth.o
+                0xfff8d77c                fw_eth_init
+                0xfff8d8fc                fw_eth_handle
+                0xfff8d911                fw_eth_setMAC
+ P              0xfff8d96a       0x6b ./src/fw/Clock/fw_clock.o
+                0xfff8d96a                fw_clock_init
+ P              0xfff8d9d5       0x76 ./src/fw/CMT/cmt0.o
+                0xfff8d9d5                fw_cmt0_init
+                0xfff8da36                fw_cmt0_handle
+ *fill*         0xfff8da4b        0x1 00
+ P              0xfff8da4c      0x230 ./src/fw/AD/fw_ad.o
+                0xfff8da4c                fw_ad_init
+                0xfff8db64                fw_ad_handle
+ *fill*         0xfff8dc7c        0x4 00
+ P              0xfff8dc80      0x148 libRenesasRX62N.a(memcmp.o)
+                0xfff8dc80                memcmp
+ P              0xfff8ddc8      0x1a8 libRenesasRX62N.a(memcpy.o)
+                0xfff8ddc8                memcpy
+ P              0xfff8df70      0x200 libRenesasRX62N.a(memset.o)
+                0xfff8df70                memset
+ P              0xfff8e170       0x26 libRenesasRX62N.a(sprintf.o)
+                0xfff8e178                sprintf
+ *fill*         0xfff8e196        0x2 00
+ P              0xfff8e198       0x18 libRenesasRX62N.a(strchr.o)
+                0xfff8e198                strchr
+ P              0xfff8e1b0       0x10 libRenesasRX62N.a(strcpy.o)
+                0xfff8e1b0                strcpy
+ P              0xfff8e1c0       0x20 libRenesasRX62N.a(strlen.o)
+                0xfff8e1c0                strlen
+ P              0xfff8e1e0       0xd0 libRenesasRX62N.a(strncmp.o)
+                0xfff8e1e0                strncmp
+ P              0xfff8e2b0      0x320 libRenesasRX62N.a(strncpy.o)
+                0xfff8e2b0                strncpy
+ P              0xfff8e5d0       0x30 libRenesasRX62N.a(strrchr.o)
+                0xfff8e5d0                strrchr
+ P              0xfff8e600       0x48 libRenesasRX62N.a(strstr.o)
+                0xfff8e600                strstr
+ P              0xfff8e648      0xf80 libRenesasRX62N.a(frmwri.o)
+                0xfff8e648                _formatted_write
+                0xfff8f5c8                etext = .
+
+.rvectors       0xfff8f5c8      0x400
+                0xfff8f5c8                _rvectors_start = .
+ *(.rvectors)
+ .rvectors      0xfff8f5c8      0x400 ./src/fw/vects.o
+                0xfff8f5c8                RelocatableVectors
+                0xfff8f9c8                _rvectors_end = .
+
+.init
+ *(.init)
+
+.fini
+ *(.fini)
+
+.got
+ *(.got)
+ *(.got.plt)
+
+.rodata         0xfff8f9c8     0xf140
+ *(.rodata)
+ *(.rodata.*)
+ .rodata.str1.1
+                0xfff8f9c8       0x35 libRenesasRX62N.a(frmwri.o)
+ *(C_1)
+ *(C_2)
+ *(C)
+ *fill*         0xfff8f9fd        0x3 00
+ C              0xfff8fa00      0x21c ./src/sw/webserver/httpd-cgi.o
+ C              0xfff8fc1c       0x30 ./src/sw/task/BlockQ.o
+ C              0xfff8fc4c       0x18 ./src/sw/task/GenQTest.o
+ C              0xfff8fc64       0x20 ./src/sw/task/IntQueue.o
+ C              0xfff8fc84       0x10 ./src/sw/task/PollQ.o
+ C              0xfff8fc94       0x1c ./src/sw/task/QPeek.o
+ C              0xfff8fcb0       0x10 ./src/sw/task/blocktim.o
+ C              0xfff8fcc0        0x8 ./src/sw/task/flash.o
+ C              0xfff8fcc8       0x30 ./src/sw/task/flop.o
+ C              0xfff8fcf8        0x8 ./src/sw/task/integer.o
+ C              0xfff8fd00       0x10 ./src/sw/task/recmutex.o
+ C              0xfff8fd10       0x20 ./src/sw/task/semtest.o
+ C              0xfff8fd30       0x18 ./src/sw/task/sw_task_glcd.o
+ C              0xfff8fd48       0x30 ./src/sw/task/uIP_Task.o
+ C              0xfff8fd78        0x4 ./src/sw/MemMang/heap_2.o
+ C              0xfff8fd7c       0x50 ./src/sw/FreeTCPIP/uip.o
+                0xfff8fd7c                uip_broadcast_addr
+                0xfff8fd80                uip_all_zeroes_addr
+ C              0xfff8fdcc        0x8 ./src/sw/FreeTCPIP/uip_arp.o
+ C              0xfff8fdd4      0x24c ./src/sw/FreeTCPIP/apps/httpd/http-strings.o
+                0xfff8fdd4                http_http
+                0xfff8fddc                http_200
+                0xfff8fde1                http_301
+                0xfff8fde6                http_302
+                0xfff8fdeb                http_get
+                0xfff8fdf0                http_10
+                0xfff8fdf9                http_11
+                0xfff8fe02                http_content_type
+                0xfff8fe11                http_texthtml
+                0xfff8fe1b                http_location
+                0xfff8fe26                http_host
+                0xfff8fe2d                http_crnl
+                0xfff8fe30                http_index_html
+                0xfff8fe3c                http_404_html
+                0xfff8fe46                http_referer
+                0xfff8fe4f                http_header_200
+                0xfff8fea3                http_header_404
+                0xfff8fefe                http_content_type_plain
+                0xfff8ff1b                http_content_type_html
+                0xfff8ff37                http_content_type_css
+                0xfff8ff52                http_content_type_text
+                0xfff8ff6e                http_content_type_png
+                0xfff8ff8a                http_content_type_gif
+                0xfff8ffa6                http_content_type_jpg
+                0xfff8ffc3                http_content_type_binary
+                0xfff8ffee                http_html
+                0xfff8fff4                http_shtml
+                0xfff8fffb                http_htm
+                0xfff90000                http_css
+                0xfff90005                http_png
+                0xfff9000a                http_gif
+                0xfff9000f                http_jpg
+                0xfff90014                http_text
+                0xfff90019                http_txt
+ C              0xfff90020     0x960c ./src/sw/FreeTCPIP/apps/httpd/httpd-fs.o
+                0xfff9958c                file_404_html
+                0xfff995a0                file_index_html
+                0xfff995b4                file_index_shtml
+                0xfff995c8                file_io_shtml
+                0xfff995dc                file_logo_jpg
+                0xfff995f0                file_runtime_shtml
+                0xfff99604                file_stats_shtml
+                0xfff99618                file_tcp_shtml
+ C              0xfff9962c       0x5c ./src/sw/FreeRTOS/tasks.o
+ C              0xfff99688        0x8 ./src/sw/FreeRTOS/timers.o
+ C              0xfff99690      0x118 ./src/mainl.o
+ C              0xfff997a8       0xb4 ./src/fw/fw_setup.o
+ C              0xfff9985c     0x1600 ./src/fw/GLCD/font_8x16.o
+                0xfff9985c                Font8x16_char_0
+                0xfff9986e                Font8x16_char_1
+                0xfff99880                Font8x16_char_2
+                0xfff99892                Font8x16_char_3
+                0xfff998a4                Font8x16_char_4
+                0xfff998b6                Font8x16_char_5
+                0xfff998c8                Font8x16_char_6
+                0xfff998da                Font8x16_char_7
+                0xfff998ec                Font8x16_char_8
+                0xfff998fe                Font8x16_char_9
+                0xfff99910                Font8x16_char_10
+                0xfff99922                Font8x16_char_11
+                0xfff99934                Font8x16_char_12
+                0xfff99946                Font8x16_char_13
+                0xfff99958                Font8x16_char_14
+                0xfff9996a                Font8x16_char_15
+                0xfff9997c                Font8x16_char_16
+                0xfff9998e                Font8x16_char_17
+                0xfff999a0                Font8x16_char_18
+                0xfff999b2                Font8x16_char_19
+                0xfff999c4                Font8x16_char_20
+                0xfff999d6                Font8x16_char_21
+                0xfff999e8                Font8x16_char_22
+                0xfff999fa                Font8x16_char_23
+                0xfff99a0c                Font8x16_char_24
+                0xfff99a1e                Font8x16_char_25
+                0xfff99a30                Font8x16_char_26
+                0xfff99a42                Font8x16_char_27
+                0xfff99a54                Font8x16_char_28
+                0xfff99a66                Font8x16_char_29
+                0xfff99a78                Font8x16_char_30
+                0xfff99a8a                Font8x16_char_31
+                0xfff99a9c                Font8x16_char_32
+                0xfff99aae                Font8x16_char_33
+                0xfff99ac0                Font8x16_char_34
+                0xfff99ad2                Font8x16_char_35
+                0xfff99ae4                Font8x16_char_36
+                0xfff99af6                Font8x16_char_37
+                0xfff99b08                Font8x16_char_38
+                0xfff99b1a                Font8x16_char_39
+                0xfff99b2c                Font8x16_char_40
+                0xfff99b3e                Font8x16_char_41
+                0xfff99b50                Font8x16_char_42
+                0xfff99b62                Font8x16_char_43
+                0xfff99b74                Font8x16_char_44
+                0xfff99b86                Font8x16_char_45
+                0xfff99b98                Font8x16_char_46
+                0xfff99baa                Font8x16_char_47
+                0xfff99bbc                Font8x16_char_48
+                0xfff99bce                Font8x16_char_49
+                0xfff99be0                Font8x16_char_50
+                0xfff99bf2                Font8x16_char_51
+                0xfff99c04                Font8x16_char_52
+                0xfff99c16                Font8x16_char_53
+                0xfff99c28                Font8x16_char_54
+                0xfff99c3a                Font8x16_char_55
+                0xfff99c4c                Font8x16_char_56
+                0xfff99c5e                Font8x16_char_57
+                0xfff99c70                Font8x16_char_58
+                0xfff99c82                Font8x16_char_59
+                0xfff99c94                Font8x16_char_60
+                0xfff99ca6                Font8x16_char_61
+                0xfff99cb8                Font8x16_char_62
+                0xfff99cca                Font8x16_char_63
+                0xfff99cdc                Font8x16_char_64
+                0xfff99cee                Font8x16_char_65
+                0xfff99d00                Font8x16_char_66
+                0xfff99d12                Font8x16_char_67
+                0xfff99d24                Font8x16_char_68
+                0xfff99d36                Font8x16_char_69
+                0xfff99d48                Font8x16_char_70
+                0xfff99d5a                Font8x16_char_71
+                0xfff99d6c                Font8x16_char_72
+                0xfff99d7e                Font8x16_char_73
+                0xfff99d90                Font8x16_char_74
+                0xfff99da2                Font8x16_char_75
+                0xfff99db4                Font8x16_char_76
+                0xfff99dc6                Font8x16_char_77
+                0xfff99dd8                Font8x16_char_78
+                0xfff99dea                Font8x16_char_79
+                0xfff99dfc                Font8x16_char_80
+                0xfff99e0e                Font8x16_char_81
+                0xfff99e20                Font8x16_char_82
+                0xfff99e32                Font8x16_char_83
+                0xfff99e44                Font8x16_char_84
+                0xfff99e56                Font8x16_char_85
+                0xfff99e68                Font8x16_char_86
+                0xfff99e7a                Font8x16_char_87
+                0xfff99e8c                Font8x16_char_88
+                0xfff99e9e                Font8x16_char_89
+                0xfff99eb0                Font8x16_char_90
+                0xfff99ec2                Font8x16_char_91
+                0xfff99ed4                Font8x16_char_92
+                0xfff99ee6                Font8x16_char_93
+                0xfff99ef8                Font8x16_char_94
+                0xfff99f0a                Font8x16_char_95
+                0xfff99f1c                Font8x16_char_96
+                0xfff99f2e                Font8x16_char_97
+                0xfff99f40                Font8x16_char_98
+                0xfff99f52                Font8x16_char_99
+                0xfff99f64                Font8x16_char_100
+                0xfff99f76                Font8x16_char_101
+                0xfff99f88                Font8x16_char_102
+                0xfff99f9a                Font8x16_char_103
+                0xfff99fac                Font8x16_char_104
+                0xfff99fbe                Font8x16_char_105
+                0xfff99fd0                Font8x16_char_106
+                0xfff99fe2                Font8x16_char_107
+                0xfff99ff4                Font8x16_char_108
+                0xfff9a006                Font8x16_char_109
+                0xfff9a018                Font8x16_char_110
+                0xfff9a02a                Font8x16_char_111
+                0xfff9a03c                Font8x16_char_112
+                0xfff9a04e                Font8x16_char_113
+                0xfff9a060                Font8x16_char_114
+                0xfff9a072                Font8x16_char_115
+                0xfff9a084                Font8x16_char_116
+                0xfff9a096                Font8x16_char_117
+                0xfff9a0a8                Font8x16_char_118
+                0xfff9a0ba                Font8x16_char_119
+                0xfff9a0cc                Font8x16_char_120
+                0xfff9a0de                Font8x16_char_121
+                0xfff9a0f0                Font8x16_char_122
+                0xfff9a102                Font8x16_char_123
+                0xfff9a114                Font8x16_char_124
+                0xfff9a126                Font8x16_char_125
+                0xfff9a138                Font8x16_char_126
+                0xfff9a14a                Font8x16_char_127
+                0xfff9a15c                Font8x16_char_128
+                0xfff9a16e                Font8x16_char_129
+                0xfff9a180                Font8x16_char_130
+                0xfff9a192                Font8x16_char_131
+                0xfff9a1a4                Font8x16_char_132
+                0xfff9a1b6                Font8x16_char_133
+                0xfff9a1c8                Font8x16_char_134
+                0xfff9a1da                Font8x16_char_135
+                0xfff9a1ec                Font8x16_char_136
+                0xfff9a1fe                Font8x16_char_137
+                0xfff9a210                Font8x16_char_138
+                0xfff9a222                Font8x16_char_139
+                0xfff9a234                Font8x16_char_140
+                0xfff9a246                Font8x16_char_141
+                0xfff9a258                Font8x16_char_142
+                0xfff9a26a                Font8x16_char_143
+                0xfff9a27c                Font8x16_char_144
+                0xfff9a28e                Font8x16_char_145
+                0xfff9a2a0                Font8x16_char_146
+                0xfff9a2b2                Font8x16_char_147
+                0xfff9a2c4                Font8x16_char_148
+                0xfff9a2d6                Font8x16_char_149
+                0xfff9a2e8                Font8x16_char_150
+                0xfff9a2fa                Font8x16_char_151
+                0xfff9a30c                Font8x16_char_152
+                0xfff9a31e                Font8x16_char_153
+                0xfff9a330                Font8x16_char_154
+                0xfff9a342                Font8x16_char_155
+                0xfff9a354                Font8x16_char_156
+                0xfff9a366                Font8x16_char_157
+                0xfff9a378                Font8x16_char_158
+                0xfff9a38a                Font8x16_char_159
+                0xfff9a39c                Font8x16_char_160
+                0xfff9a3ae                Font8x16_char_161
+                0xfff9a3c0                Font8x16_char_162
+                0xfff9a3d2                Font8x16_char_163
+                0xfff9a3e4                Font8x16_char_164
+                0xfff9a3f6                Font8x16_char_165
+                0xfff9a408                Font8x16_char_166
+                0xfff9a41a                Font8x16_char_167
+                0xfff9a42c                Font8x16_char_168
+                0xfff9a43e                Font8x16_char_169
+                0xfff9a450                Font8x16_char_170
+                0xfff9a462                Font8x16_char_171
+                0xfff9a474                Font8x16_char_172
+                0xfff9a486                Font8x16_char_173
+                0xfff9a498                Font8x16_char_174
+                0xfff9a4aa                Font8x16_char_175
+                0xfff9a4bc                Font8x16_char_176
+                0xfff9a4ce                Font8x16_char_177
+                0xfff9a4e0                Font8x16_char_178
+                0xfff9a4f2                Font8x16_char_179
+                0xfff9a504                Font8x16_char_180
+                0xfff9a516                Font8x16_char_181
+                0xfff9a528                Font8x16_char_182
+                0xfff9a53a                Font8x16_char_183
+                0xfff9a54c                Font8x16_char_184
+                0xfff9a55e                Font8x16_char_185
+                0xfff9a570                Font8x16_char_186
+                0xfff9a582                Font8x16_char_187
+                0xfff9a594                Font8x16_char_188
+                0xfff9a5a6                Font8x16_char_189
+                0xfff9a5b8                Font8x16_char_190
+                0xfff9a5ca                Font8x16_char_191
+                0xfff9a5dc                Font8x16_char_192
+                0xfff9a5ee                Font8x16_char_193
+                0xfff9a600                Font8x16_char_194
+                0xfff9a612                Font8x16_char_195
+                0xfff9a624                Font8x16_char_196
+                0xfff9a636                Font8x16_char_197
+                0xfff9a648                Font8x16_char_198
+                0xfff9a65a                Font8x16_char_199
+                0xfff9a66c                Font8x16_char_200
+                0xfff9a67e                Font8x16_char_201
+                0xfff9a690                Font8x16_char_202
+                0xfff9a6a2                Font8x16_char_203
+                0xfff9a6b4                Font8x16_char_204
+                0xfff9a6c6                Font8x16_char_205
+                0xfff9a6d8                Font8x16_char_206
+                0xfff9a6ea                Font8x16_char_207
+                0xfff9a6fc                Font8x16_char_208
+                0xfff9a70e                Font8x16_char_209
+                0xfff9a720                Font8x16_char_210
+                0xfff9a732                Font8x16_char_211
+                0xfff9a744                Font8x16_char_212
+                0xfff9a756                Font8x16_char_213
+                0xfff9a768                Font8x16_char_214
+                0xfff9a77a                Font8x16_char_215
+                0xfff9a78c                Font8x16_char_216
+                0xfff9a79e                Font8x16_char_217
+                0xfff9a7b0                Font8x16_char_218
+                0xfff9a7c2                Font8x16_char_219
+                0xfff9a7d4                Font8x16_char_220
+                0xfff9a7e6                Font8x16_char_221
+                0xfff9a7f8                Font8x16_char_222
+                0xfff9a80a                Font8x16_char_223
+                0xfff9a81c                Font8x16_char_224
+                0xfff9a82e                Font8x16_char_225
+                0xfff9a840                Font8x16_char_226
+                0xfff9a852                Font8x16_char_227
+                0xfff9a864                Font8x16_char_228
+                0xfff9a876                Font8x16_char_229
+                0xfff9a888                Font8x16_char_230
+                0xfff9a89a                Font8x16_char_231
+                0xfff9a8ac                Font8x16_char_232
+                0xfff9a8be                Font8x16_char_233
+                0xfff9a8d0                Font8x16_char_234
+                0xfff9a8e2                Font8x16_char_235
+                0xfff9a8f4                Font8x16_char_236
+                0xfff9a906                Font8x16_char_237
+                0xfff9a918                Font8x16_char_238
+                0xfff9a92a                Font8x16_char_239
+                0xfff9a93c                Font8x16_char_240
+                0xfff9a94e                Font8x16_char_241
+                0xfff9a960                Font8x16_char_242
+                0xfff9a972                Font8x16_char_243
+                0xfff9a984                Font8x16_char_244
+                0xfff9a996                Font8x16_char_245
+                0xfff9a9a8                Font8x16_char_246
+                0xfff9a9ba                Font8x16_char_247
+                0xfff9a9cc                Font8x16_char_248
+                0xfff9a9de                Font8x16_char_249
+                0xfff9a9f0                Font8x16_char_250
+                0xfff9aa02                Font8x16_char_251
+                0xfff9aa14                Font8x16_char_252
+                0xfff9aa26                Font8x16_char_253
+                0xfff9aa38                Font8x16_char_254
+                0xfff9aa4a                Font8x16_char_255
+                0xfff9aa5c                Font8x16_table
+ C              0xfff9ae5c      0xe00 ./src/fw/GLCD/font_8x8.o
+                0xfff9ae5c                Font8x8_char_0
+                0xfff9ae66                Font8x8_char_1
+                0xfff9ae70                Font8x8_char_2
+                0xfff9ae7a                Font8x8_char_3
+                0xfff9ae84                Font8x8_char_4
+                0xfff9ae8e                Font8x8_char_5
+                0xfff9ae98                Font8x8_char_6
+                0xfff9aea2                Font8x8_char_7
+                0xfff9aeac                Font8x8_char_8
+                0xfff9aeb6                Font8x8_char_9
+                0xfff9aec0                Font8x8_char_10
+                0xfff9aeca                Font8x8_char_11
+                0xfff9aed4                Font8x8_char_12
+                0xfff9aede                Font8x8_char_13
+                0xfff9aee8                Font8x8_char_14
+                0xfff9aef2                Font8x8_char_15
+                0xfff9aefc                Font8x8_char_16
+                0xfff9af06                Font8x8_char_17
+                0xfff9af10                Font8x8_char_18
+                0xfff9af1a                Font8x8_char_19
+                0xfff9af24                Font8x8_char_20
+                0xfff9af2e                Font8x8_char_21
+                0xfff9af38                Font8x8_char_22
+                0xfff9af42                Font8x8_char_23
+                0xfff9af4c                Font8x8_char_24
+                0xfff9af56                Font8x8_char_25
+                0xfff9af60                Font8x8_char_26
+                0xfff9af6a                Font8x8_char_27
+                0xfff9af74                Font8x8_char_28
+                0xfff9af7e                Font8x8_char_29
+                0xfff9af88                Font8x8_char_30
+                0xfff9af92                Font8x8_char_31
+                0xfff9af9c                Font8x8_char_32
+                0xfff9afa6                Font8x8_char_33
+                0xfff9afb0                Font8x8_char_34
+                0xfff9afba                Font8x8_char_35
+                0xfff9afc4                Font8x8_char_36
+                0xfff9afce                Font8x8_char_37
+                0xfff9afd8                Font8x8_char_38
+                0xfff9afe2                Font8x8_char_39
+                0xfff9afec                Font8x8_char_40
+                0xfff9aff6                Font8x8_char_41
+                0xfff9b000                Font8x8_char_42
+                0xfff9b00a                Font8x8_char_43
+                0xfff9b014                Font8x8_char_44
+                0xfff9b01e                Font8x8_char_45
+                0xfff9b028                Font8x8_char_46
+                0xfff9b032                Font8x8_char_47
+                0xfff9b03c                Font8x8_char_48
+                0xfff9b046                Font8x8_char_49
+                0xfff9b050                Font8x8_char_50
+                0xfff9b05a                Font8x8_char_51
+                0xfff9b064                Font8x8_char_52
+                0xfff9b06e                Font8x8_char_53
+                0xfff9b078                Font8x8_char_54
+                0xfff9b082                Font8x8_char_55
+                0xfff9b08c                Font8x8_char_56
+                0xfff9b096                Font8x8_char_57
+                0xfff9b0a0                Font8x8_char_58
+                0xfff9b0aa                Font8x8_char_59
+                0xfff9b0b4                Font8x8_char_60
+                0xfff9b0be                Font8x8_char_61
+                0xfff9b0c8                Font8x8_char_62
+                0xfff9b0d2                Font8x8_char_63
+                0xfff9b0dc                Font8x8_char_64
+                0xfff9b0e6                Font8x8_char_65
+                0xfff9b0f0                Font8x8_char_66
+                0xfff9b0fa                Font8x8_char_67
+                0xfff9b104                Font8x8_char_68
+                0xfff9b10e                Font8x8_char_69
+                0xfff9b118                Font8x8_char_70
+                0xfff9b122                Font8x8_char_71
+                0xfff9b12c                Font8x8_char_72
+                0xfff9b136                Font8x8_char_73
+                0xfff9b140                Font8x8_char_74
+                0xfff9b14a                Font8x8_char_75
+                0xfff9b154                Font8x8_char_76
+                0xfff9b15e                Font8x8_char_77
+                0xfff9b168                Font8x8_char_78
+                0xfff9b172                Font8x8_char_79
+                0xfff9b17c                Font8x8_char_80
+                0xfff9b186                Font8x8_char_81
+                0xfff9b190                Font8x8_char_82
+                0xfff9b19a                Font8x8_char_83
+                0xfff9b1a4                Font8x8_char_84
+                0xfff9b1ae                Font8x8_char_85
+                0xfff9b1b8                Font8x8_char_86
+                0xfff9b1c2                Font8x8_char_87
+                0xfff9b1cc                Font8x8_char_88
+                0xfff9b1d6                Font8x8_char_89
+                0xfff9b1e0                Font8x8_char_90
+                0xfff9b1ea                Font8x8_char_91
+                0xfff9b1f4                Font8x8_char_92
+                0xfff9b1fe                Font8x8_char_93
+                0xfff9b208                Font8x8_char_94
+                0xfff9b212                Font8x8_char_95
+                0xfff9b21c                Font8x8_char_96
+                0xfff9b226                Font8x8_char_97
+                0xfff9b230                Font8x8_char_98
+                0xfff9b23a                Font8x8_char_99
+                0xfff9b244                Font8x8_char_100
+                0xfff9b24e                Font8x8_char_101
+                0xfff9b258                Font8x8_char_102
+                0xfff9b262                Font8x8_char_103
+                0xfff9b26c                Font8x8_char_104
+                0xfff9b276                Font8x8_char_105
+                0xfff9b280                Font8x8_char_106
+                0xfff9b28a                Font8x8_char_107
+                0xfff9b294                Font8x8_char_108
+                0xfff9b29e                Font8x8_char_109
+                0xfff9b2a8                Font8x8_char_110
+                0xfff9b2b2                Font8x8_char_111
+                0xfff9b2bc                Font8x8_char_112
+                0xfff9b2c6                Font8x8_char_113
+                0xfff9b2d0                Font8x8_char_114
+                0xfff9b2da                Font8x8_char_115
+                0xfff9b2e4                Font8x8_char_116
+                0xfff9b2ee                Font8x8_char_117
+                0xfff9b2f8                Font8x8_char_118
+                0xfff9b302                Font8x8_char_119
+                0xfff9b30c                Font8x8_char_120
+                0xfff9b316                Font8x8_char_121
+                0xfff9b320                Font8x8_char_122
+                0xfff9b32a                Font8x8_char_123
+                0xfff9b334                Font8x8_char_124
+                0xfff9b33e                Font8x8_char_125
+                0xfff9b348                Font8x8_char_126
+                0xfff9b352                Font8x8_char_127
+                0xfff9b35c                Font8x8_char_128
+                0xfff9b366                Font8x8_char_129
+                0xfff9b370                Font8x8_char_130
+                0xfff9b37a                Font8x8_char_131
+                0xfff9b384                Font8x8_char_132
+                0xfff9b38e                Font8x8_char_133
+                0xfff9b398                Font8x8_char_134
+                0xfff9b3a2                Font8x8_char_135
+                0xfff9b3ac                Font8x8_char_136
+                0xfff9b3b6                Font8x8_char_137
+                0xfff9b3c0                Font8x8_char_138
+                0xfff9b3ca                Font8x8_char_139
+                0xfff9b3d4                Font8x8_char_140
+                0xfff9b3de                Font8x8_char_141
+                0xfff9b3e8                Font8x8_char_142
+                0xfff9b3f2                Font8x8_char_143
+                0xfff9b3fc                Font8x8_char_144
+                0xfff9b406                Font8x8_char_145
+                0xfff9b410                Font8x8_char_146
+                0xfff9b41a                Font8x8_char_147
+                0xfff9b424                Font8x8_char_148
+                0xfff9b42e                Font8x8_char_149
+                0xfff9b438                Font8x8_char_150
+                0xfff9b442                Font8x8_char_151
+                0xfff9b44c                Font8x8_char_152
+                0xfff9b456                Font8x8_char_153
+                0xfff9b460                Font8x8_char_154
+                0xfff9b46a                Font8x8_char_155
+                0xfff9b474                Font8x8_char_156
+                0xfff9b47e                Font8x8_char_157
+                0xfff9b488                Font8x8_char_158
+                0xfff9b492                Font8x8_char_159
+                0xfff9b49c                Font8x8_char_160
+                0xfff9b4a6                Font8x8_char_161
+                0xfff9b4b0                Font8x8_char_162
+                0xfff9b4ba                Font8x8_char_163
+                0xfff9b4c4                Font8x8_char_164
+                0xfff9b4ce                Font8x8_char_165
+                0xfff9b4d8                Font8x8_char_166
+                0xfff9b4e2                Font8x8_char_167
+                0xfff9b4ec                Font8x8_char_168
+                0xfff9b4f6                Font8x8_char_169
+                0xfff9b500                Font8x8_char_170
+                0xfff9b50a                Font8x8_char_171
+                0xfff9b514                Font8x8_char_172
+                0xfff9b51e                Font8x8_char_173
+                0xfff9b528                Font8x8_char_174
+                0xfff9b532                Font8x8_char_175
+                0xfff9b53c                Font8x8_char_176
+                0xfff9b546                Font8x8_char_177
+                0xfff9b550                Font8x8_char_178
+                0xfff9b55a                Font8x8_char_179
+                0xfff9b564                Font8x8_char_180
+                0xfff9b56e                Font8x8_char_181
+                0xfff9b578                Font8x8_char_182
+                0xfff9b582                Font8x8_char_183
+                0xfff9b58c                Font8x8_char_184
+                0xfff9b596                Font8x8_char_185
+                0xfff9b5a0                Font8x8_char_186
+                0xfff9b5aa                Font8x8_char_187
+                0xfff9b5b4                Font8x8_char_188
+                0xfff9b5be                Font8x8_char_189
+                0xfff9b5c8                Font8x8_char_190
+                0xfff9b5d2                Font8x8_char_191
+                0xfff9b5dc                Font8x8_char_192
+                0xfff9b5e6                Font8x8_char_193
+                0xfff9b5f0                Font8x8_char_194
+                0xfff9b5fa                Font8x8_char_195
+                0xfff9b604                Font8x8_char_196
+                0xfff9b60e                Font8x8_char_197
+                0xfff9b618                Font8x8_char_198
+                0xfff9b622                Font8x8_char_199
+                0xfff9b62c                Font8x8_char_200
+                0xfff9b636                Font8x8_char_201
+                0xfff9b640                Font8x8_char_202
+                0xfff9b64a                Font8x8_char_203
+                0xfff9b654                Font8x8_char_204
+                0xfff9b65e                Font8x8_char_205
+                0xfff9b668                Font8x8_char_206
+                0xfff9b672                Font8x8_char_207
+                0xfff9b67c                Font8x8_char_208
+                0xfff9b686                Font8x8_char_209
+                0xfff9b690                Font8x8_char_210
+                0xfff9b69a                Font8x8_char_211
+                0xfff9b6a4                Font8x8_char_212
+                0xfff9b6ae                Font8x8_char_213
+                0xfff9b6b8                Font8x8_char_214
+                0xfff9b6c2                Font8x8_char_215
+                0xfff9b6cc                Font8x8_char_216
+                0xfff9b6d6                Font8x8_char_217
+                0xfff9b6e0                Font8x8_char_218
+                0xfff9b6ea                Font8x8_char_219
+                0xfff9b6f4                Font8x8_char_220
+                0xfff9b6fe                Font8x8_char_221
+                0xfff9b708                Font8x8_char_222
+                0xfff9b712                Font8x8_char_223
+                0xfff9b71c                Font8x8_char_224
+                0xfff9b726                Font8x8_char_225
+                0xfff9b730                Font8x8_char_226
+                0xfff9b73a                Font8x8_char_227
+                0xfff9b744                Font8x8_char_228
+                0xfff9b74e                Font8x8_char_229
+                0xfff9b758                Font8x8_char_230
+                0xfff9b762                Font8x8_char_231
+                0xfff9b76c                Font8x8_char_232
+                0xfff9b776                Font8x8_char_233
+                0xfff9b780                Font8x8_char_234
+                0xfff9b78a                Font8x8_char_235
+                0xfff9b794                Font8x8_char_236
+                0xfff9b79e                Font8x8_char_237
+                0xfff9b7a8                Font8x8_char_238
+                0xfff9b7b2                Font8x8_char_239
+                0xfff9b7bc                Font8x8_char_240
+                0xfff9b7c6                Font8x8_char_241
+                0xfff9b7d0                Font8x8_char_242
+                0xfff9b7da                Font8x8_char_243
+                0xfff9b7e4                Font8x8_char_244
+                0xfff9b7ee                Font8x8_char_245
+                0xfff9b7f8                Font8x8_char_246
+                0xfff9b802                Font8x8_char_247
+                0xfff9b80c                Font8x8_char_248
+                0xfff9b816                Font8x8_char_249
+                0xfff9b820                Font8x8_char_250
+                0xfff9b82a                Font8x8_char_251
+                0xfff9b834                Font8x8_char_252
+                0xfff9b83e                Font8x8_char_253
+                0xfff9b848                Font8x8_char_254
+                0xfff9b852                Font8x8_char_255
+                0xfff9b85c                Font8x8_table
+ C              0xfff9bc5c      0x83c ./src/fw/GLCD/font_bitmap.o
+                0xfff9bc5c                Bitmaps_VolumeBar0
+                0xfff9bc8e                Bitmaps_VolumeBar1
+                0xfff9bcc0                Bitmaps_VolumeBar2
+                0xfff9bcf2                Bitmaps_VolumeBar3
+                0xfff9bd24                Bitmaps_VolumeBar4
+                0xfff9bd56                Bitmaps_VolumeBar5
+                0xfff9bd88                Bitmaps_VolumeBar6
+                0xfff9bdba                Bitmaps_VolumeBar7
+                0xfff9bdec                Bitmaps_VolumeBar8
+                0xfff9be1e                Bitmaps_VolumeBar9
+                0xfff9be50                Bitmaps_VolumeBar10
+                0xfff9be82                Bitmaps_Bars0
+                0xfff9beb2                Bitmaps_Bars1
+                0xfff9bee2                Bitmaps_Bars2
+                0xfff9bf12                Bitmaps_Bars3
+                0xfff9bf42                Bitmaps_Bars4
+                0xfff9bf72                Bitmaps_Bars5
+                0xfff9bfa2                Bitmaps_BatteryLow
+                0xfff9bfbc                Bitmaps_BatteryHigh
+                0xfff9bfd6                Bitmaps_AC
+                0xfff9bff0                Bitmaps_Signal
+                0xfff9c012                Bitmaps_Voice
+                0xfff9c034                Bitmaps_Tone
+                0xfff9c056                Bitmaps_NOAA
+                0xfff9c098                Bitmaps_table
+ C              0xfff9c498      0x8ec ./src/fw/GLCD/font_helvr10.o
+                0xfff9c498                FontHelvr10_char_32
+                0xfff9c4a0                FontHelvr10_char_33
+                0xfff9c4a8                FontHelvr10_char_34
+                0xfff9c4b2                FontHelvr10_char_35
+                0xfff9c4c0                FontHelvr10_char_36
+                0xfff9c4ce                FontHelvr10_char_37
+                0xfff9c4e2                FontHelvr10_char_38
+                0xfff9c4f4                FontHelvr10_char_39
+                0xfff9c4fc                FontHelvr10_char_40
+                0xfff9c506                FontHelvr10_char_41
+                0xfff9c510                FontHelvr10_char_42
+                0xfff9c51a                FontHelvr10_char_43
+                0xfff9c528                FontHelvr10_char_44
+                0xfff9c530                FontHelvr10_char_45
+                0xfff9c540                FontHelvr10_char_46
+                0xfff9c548                FontHelvr10_char_47
+                0xfff9c550                FontHelvr10_char_48
+                0xfff9c55e                FontHelvr10_char_49
+                0xfff9c56c                FontHelvr10_char_50
+                0xfff9c57a                FontHelvr10_char_51
+                0xfff9c588                FontHelvr10_char_52
+                0xfff9c596                FontHelvr10_char_53
+                0xfff9c5a4                FontHelvr10_char_54
+                0xfff9c5b2                FontHelvr10_char_55
+                0xfff9c5c0                FontHelvr10_char_56
+                0xfff9c5ce                FontHelvr10_char_57
+                0xfff9c5dc                FontHelvr10_char_58
+                0xfff9c5e4                FontHelvr10_char_59
+                0xfff9c5ec                FontHelvr10_char_60
+                0xfff9c5fa                FontHelvr10_char_61
+                0xfff9c606                FontHelvr10_char_62
+                0xfff9c614                FontHelvr10_char_63
+                0xfff9c622                FontHelvr10_char_64
+                0xfff9c63a                FontHelvr10_char_65
+                0xfff9c64a                FontHelvr10_char_66
+                0xfff9c65a                FontHelvr10_char_67
+                0xfff9c66c                FontHelvr10_char_68
+                0xfff9c67e                FontHelvr10_char_69
+                0xfff9c68e                FontHelvr10_char_70
+                0xfff9c69c                FontHelvr10_char_71
+                0xfff9c6ae                FontHelvr10_char_72
+                0xfff9c6c0                FontHelvr10_char_73
+                0xfff9c6c8                FontHelvr10_char_74
+                0xfff9c6d4                FontHelvr10_char_75
+                0xfff9c6e4                FontHelvr10_char_76
+                0xfff9c6f2                FontHelvr10_char_77
+                0xfff9c706                FontHelvr10_char_78
+                0xfff9c718                FontHelvr10_char_79
+                0xfff9c72a                FontHelvr10_char_80
+                0xfff9c73a                FontHelvr10_char_81
+                0xfff9c74c                FontHelvr10_char_82
+                0xfff9c75c                FontHelvr10_char_83
+                0xfff9c76c                FontHelvr10_char_84
+                0xfff9c778                FontHelvr10_char_85
+                0xfff9c78a                FontHelvr10_char_86
+                0xfff9c79a                FontHelvr10_char_87
+                0xfff9c7ae                FontHelvr10_char_88
+                0xfff9c7be                FontHelvr10_char_89
+                0xfff9c7ce                FontHelvr10_char_90
+                0xfff9c7de                FontHelvr10_char_91
+                0xfff9c7e6                FontHelvr10_char_92
+                0xfff9c7ee                FontHelvr10_char_93
+                0xfff9c7f6                FontHelvr10_char_94
+                0xfff9c804                FontHelvr10_char_95
+                0xfff9c812                FontHelvr10_char_96
+                0xfff9c81a                FontHelvr10_char_97
+                0xfff9c826                FontHelvr10_char_98
+                0xfff9c834                FontHelvr10_char_99
+                0xfff9c840                FontHelvr10_char_100
+                0xfff9c84e                FontHelvr10_char_101
+                0xfff9c85a                FontHelvr10_char_102
+                0xfff9c864                FontHelvr10_char_103
+                0xfff9c872                FontHelvr10_char_104
+                0xfff9c880                FontHelvr10_char_105
+                0xfff9c886                FontHelvr10_char_106
+                0xfff9c88c                FontHelvr10_char_107
+                0xfff9c898                FontHelvr10_char_108
+                0xfff9c89e                FontHelvr10_char_109
+                0xfff9c8b0                FontHelvr10_char_110
+                0xfff9c8be                FontHelvr10_char_111
+                0xfff9c8cc                FontHelvr10_char_112
+                0xfff9c8da                FontHelvr10_char_113
+                0xfff9c8e8                FontHelvr10_char_114
+                0xfff9c8f2                FontHelvr10_char_115
+                0xfff9c8fe                FontHelvr10_char_116
+                0xfff9c908                FontHelvr10_char_117
+                0xfff9c914                FontHelvr10_char_118
+                0xfff9c922                FontHelvr10_char_119
+                0xfff9c934                FontHelvr10_char_120
+                0xfff9c942                FontHelvr10_char_121
+                0xfff9c94e                FontHelvr10_char_122
+                0xfff9c95a                FontHelvr10_char_123
+                0xfff9c962                FontHelvr10_char_124
+                0xfff9c96a                FontHelvr10_char_125
+                0xfff9c972                FontHelvr10_char_126
+                0xfff9c984                FontHelvr10_table
+ C              0xfff9cd84      0x8ec ./src/fw/GLCD/font_winfreesystem14x16.o
+                0xfff9cd84                FontWinFreeSystem14x16_char_32
+                0xfff9cd8c                FontWinFreeSystem14x16_char_33
+                0xfff9cd94                FontWinFreeSystem14x16_char_34
+                0xfff9cd9e                FontWinFreeSystem14x16_char_35
+                0xfff9cdac                FontWinFreeSystem14x16_char_36
+                0xfff9cdba                FontWinFreeSystem14x16_char_37
+                0xfff9cdce                FontWinFreeSystem14x16_char_38
+                0xfff9cde0                FontWinFreeSystem14x16_char_39
+                0xfff9cde8                FontWinFreeSystem14x16_char_40
+                0xfff9cdf2                FontWinFreeSystem14x16_char_41
+                0xfff9cdfc                FontWinFreeSystem14x16_char_42
+                0xfff9ce06                FontWinFreeSystem14x16_char_43
+                0xfff9ce14                FontWinFreeSystem14x16_char_44
+                0xfff9ce1c                FontWinFreeSystem14x16_char_45
+                0xfff9ce2c                FontWinFreeSystem14x16_char_46
+                0xfff9ce34                FontWinFreeSystem14x16_char_47
+                0xfff9ce3c                FontWinFreeSystem14x16_char_48
+                0xfff9ce4a                FontWinFreeSystem14x16_char_49
+                0xfff9ce58                FontWinFreeSystem14x16_char_50
+                0xfff9ce66                FontWinFreeSystem14x16_char_51
+                0xfff9ce74                FontWinFreeSystem14x16_char_52
+                0xfff9ce82                FontWinFreeSystem14x16_char_53
+                0xfff9ce90                FontWinFreeSystem14x16_char_54
+                0xfff9ce9e                FontWinFreeSystem14x16_char_55
+                0xfff9ceac                FontWinFreeSystem14x16_char_56
+                0xfff9ceba                FontWinFreeSystem14x16_char_57
+                0xfff9cec8                FontWinFreeSystem14x16_char_58
+                0xfff9ced0                FontWinFreeSystem14x16_char_59
+                0xfff9ced8                FontWinFreeSystem14x16_char_60
+                0xfff9cee6                FontWinFreeSystem14x16_char_61
+                0xfff9cef2                FontWinFreeSystem14x16_char_62
+                0xfff9cf00                FontWinFreeSystem14x16_char_63
+                0xfff9cf0e                FontWinFreeSystem14x16_char_64
+                0xfff9cf26                FontWinFreeSystem14x16_char_65
+                0xfff9cf36                FontWinFreeSystem14x16_char_66
+                0xfff9cf46                FontWinFreeSystem14x16_char_67
+                0xfff9cf58                FontWinFreeSystem14x16_char_68
+                0xfff9cf6a                FontWinFreeSystem14x16_char_69
+                0xfff9cf7a                FontWinFreeSystem14x16_char_70
+                0xfff9cf88                FontWinFreeSystem14x16_char_71
+                0xfff9cf9a                FontWinFreeSystem14x16_char_72
+                0xfff9cfac                FontWinFreeSystem14x16_char_73
+                0xfff9cfb4                FontWinFreeSystem14x16_char_74
+                0xfff9cfc0                FontWinFreeSystem14x16_char_75
+                0xfff9cfd0                FontWinFreeSystem14x16_char_76
+                0xfff9cfde                FontWinFreeSystem14x16_char_77
+                0xfff9cff2                FontWinFreeSystem14x16_char_78
+                0xfff9d004                FontWinFreeSystem14x16_char_79
+                0xfff9d016                FontWinFreeSystem14x16_char_80
+                0xfff9d026                FontWinFreeSystem14x16_char_81
+                0xfff9d038                FontWinFreeSystem14x16_char_82
+                0xfff9d048                FontWinFreeSystem14x16_char_83
+                0xfff9d058                FontWinFreeSystem14x16_char_84
+                0xfff9d064                FontWinFreeSystem14x16_char_85
+                0xfff9d076                FontWinFreeSystem14x16_char_86
+                0xfff9d086                FontWinFreeSystem14x16_char_87
+                0xfff9d09a                FontWinFreeSystem14x16_char_88
+                0xfff9d0aa                FontWinFreeSystem14x16_char_89
+                0xfff9d0ba                FontWinFreeSystem14x16_char_90
+                0xfff9d0ca                FontWinFreeSystem14x16_char_91
+                0xfff9d0d2                FontWinFreeSystem14x16_char_92
+                0xfff9d0da                FontWinFreeSystem14x16_char_93
+                0xfff9d0e2                FontWinFreeSystem14x16_char_94
+                0xfff9d0f0                FontWinFreeSystem14x16_char_95
+                0xfff9d0fe                FontWinFreeSystem14x16_char_96
+                0xfff9d106                FontWinFreeSystem14x16_char_97
+                0xfff9d112                FontWinFreeSystem14x16_char_98
+                0xfff9d120                FontWinFreeSystem14x16_char_99
+                0xfff9d12c                FontWinFreeSystem14x16_char_100
+                0xfff9d13a                FontWinFreeSystem14x16_char_101
+                0xfff9d146                FontWinFreeSystem14x16_char_102
+                0xfff9d150                FontWinFreeSystem14x16_char_103
+                0xfff9d15e                FontWinFreeSystem14x16_char_104
+                0xfff9d16c                FontWinFreeSystem14x16_char_105
+                0xfff9d172                FontWinFreeSystem14x16_char_106
+                0xfff9d178                FontWinFreeSystem14x16_char_107
+                0xfff9d184                FontWinFreeSystem14x16_char_108
+                0xfff9d18a                FontWinFreeSystem14x16_char_109
+                0xfff9d19c                FontWinFreeSystem14x16_char_110
+                0xfff9d1aa                FontWinFreeSystem14x16_char_111
+                0xfff9d1b8                FontWinFreeSystem14x16_char_112
+                0xfff9d1c6                FontWinFreeSystem14x16_char_113
+                0xfff9d1d4                FontWinFreeSystem14x16_char_114
+                0xfff9d1de                FontWinFreeSystem14x16_char_115
+                0xfff9d1ea                FontWinFreeSystem14x16_char_116
+                0xfff9d1f4                FontWinFreeSystem14x16_char_117
+                0xfff9d200                FontWinFreeSystem14x16_char_118
+                0xfff9d20e                FontWinFreeSystem14x16_char_119
+                0xfff9d220                FontWinFreeSystem14x16_char_120
+                0xfff9d22e                FontWinFreeSystem14x16_char_121
+                0xfff9d23a                FontWinFreeSystem14x16_char_122
+                0xfff9d246                FontWinFreeSystem14x16_char_123
+                0xfff9d24e                FontWinFreeSystem14x16_char_124
+                0xfff9d256                FontWinFreeSystem14x16_char_125
+                0xfff9d25e                FontWinFreeSystem14x16_char_126
+                0xfff9d270                FontWinFreeSystem14x16_table
+ C              0xfff9d670      0x77c ./src/fw/GLCD/font_x5x7.o
+                0xfff9d670                Fontx5x7_char_0
+                0xfff9d677                Fontx5x7_char_1
+                0xfff9d67e                Fontx5x7_char_2
+                0xfff9d685                Fontx5x7_char_3
+                0xfff9d68c                Fontx5x7_char_4
+                0xfff9d693                Fontx5x7_char_5
+                0xfff9d69a                Fontx5x7_char_6
+                0xfff9d6a1                Fontx5x7_char_7
+                0xfff9d6a8                Fontx5x7_char_8
+                0xfff9d6af                Fontx5x7_char_9
+                0xfff9d6b6                Fontx5x7_char_10
+                0xfff9d6bd                Fontx5x7_char_11
+                0xfff9d6c4                Fontx5x7_char_12
+                0xfff9d6cb                Fontx5x7_char_13
+                0xfff9d6d2                Fontx5x7_char_14
+                0xfff9d6d9                Fontx5x7_char_15
+                0xfff9d6e0                Fontx5x7_char_16
+                0xfff9d6e7                Fontx5x7_char_17
+                0xfff9d6ee                Fontx5x7_char_18
+                0xfff9d6f5                Fontx5x7_char_19
+                0xfff9d6fc                Fontx5x7_char_20
+                0xfff9d703                Fontx5x7_char_21
+                0xfff9d70a                Fontx5x7_char_22
+                0xfff9d711                Fontx5x7_char_23
+                0xfff9d718                Fontx5x7_char_24
+                0xfff9d71f                Fontx5x7_char_25
+                0xfff9d726                Fontx5x7_char_26
+                0xfff9d72d                Fontx5x7_char_27
+                0xfff9d734                Fontx5x7_char_28
+                0xfff9d73b                Fontx5x7_char_29
+                0xfff9d742                Fontx5x7_char_30
+                0xfff9d749                Fontx5x7_char_31
+                0xfff9d750                Fontx5x7_char_32
+                0xfff9d757                Fontx5x7_char_33
+                0xfff9d75e                Fontx5x7_char_34
+                0xfff9d765                Fontx5x7_char_35
+                0xfff9d76c                Fontx5x7_char_36
+                0xfff9d773                Fontx5x7_char_37
+                0xfff9d77a                Fontx5x7_char_38
+                0xfff9d781                Fontx5x7_char_39
+                0xfff9d788                Fontx5x7_char_40
+                0xfff9d78f                Fontx5x7_char_41
+                0xfff9d796                Fontx5x7_char_42
+                0xfff9d79d                Fontx5x7_char_43
+                0xfff9d7a4                Fontx5x7_char_44
+                0xfff9d7ab                Fontx5x7_char_45
+                0xfff9d7b2                Fontx5x7_char_46
+                0xfff9d7b9                Fontx5x7_char_47
+                0xfff9d7c0                Fontx5x7_char_48
+                0xfff9d7c7                Fontx5x7_char_49
+                0xfff9d7ce                Fontx5x7_char_50
+                0xfff9d7d5                Fontx5x7_char_51
+                0xfff9d7dc                Fontx5x7_char_52
+                0xfff9d7e3                Fontx5x7_char_53
+                0xfff9d7ea                Fontx5x7_char_54
+                0xfff9d7f1                Fontx5x7_char_55
+                0xfff9d7f8                Fontx5x7_char_56
+                0xfff9d7ff                Fontx5x7_char_57
+                0xfff9d806                Fontx5x7_char_58
+                0xfff9d80d                Fontx5x7_char_59
+                0xfff9d814                Fontx5x7_char_60
+                0xfff9d81b                Fontx5x7_char_61
+                0xfff9d822                Fontx5x7_char_62
+                0xfff9d829                Fontx5x7_char_63
+                0xfff9d830                Fontx5x7_char_64
+                0xfff9d837                Fontx5x7_char_65
+                0xfff9d83e                Fontx5x7_char_66
+                0xfff9d845                Fontx5x7_char_67
+                0xfff9d84c                Fontx5x7_char_68
+                0xfff9d853                Fontx5x7_char_69
+                0xfff9d85a                Fontx5x7_char_70
+                0xfff9d861                Fontx5x7_char_71
+                0xfff9d868                Fontx5x7_char_72
+                0xfff9d86f                Fontx5x7_char_73
+                0xfff9d876                Fontx5x7_char_74
+                0xfff9d87d                Fontx5x7_char_75
+                0xfff9d884                Fontx5x7_char_76
+                0xfff9d88b                Fontx5x7_char_77
+                0xfff9d892                Fontx5x7_char_78
+                0xfff9d899                Fontx5x7_char_79
+                0xfff9d8a0                Fontx5x7_char_80
+                0xfff9d8a7                Fontx5x7_char_81
+                0xfff9d8ae                Fontx5x7_char_82
+                0xfff9d8b5                Fontx5x7_char_83
+                0xfff9d8bc                Fontx5x7_char_84
+                0xfff9d8c3                Fontx5x7_char_85
+                0xfff9d8ca                Fontx5x7_char_86
+                0xfff9d8d1                Fontx5x7_char_87
+                0xfff9d8d8                Fontx5x7_char_88
+                0xfff9d8df                Fontx5x7_char_89
+                0xfff9d8e6                Fontx5x7_char_90
+                0xfff9d8ed                Fontx5x7_char_91
+                0xfff9d8f4                Fontx5x7_char_92
+                0xfff9d8fb                Fontx5x7_char_93
+                0xfff9d902                Fontx5x7_char_94
+                0xfff9d909                Fontx5x7_char_95
+                0xfff9d910                Fontx5x7_char_96
+                0xfff9d917                Fontx5x7_char_97
+                0xfff9d91e                Fontx5x7_char_98
+                0xfff9d925                Fontx5x7_char_99
+                0xfff9d92c                Fontx5x7_char_100
+                0xfff9d933                Fontx5x7_char_101
+                0xfff9d93a                Fontx5x7_char_102
+                0xfff9d941                Fontx5x7_char_103
+                0xfff9d948                Fontx5x7_char_104
+                0xfff9d94f                Fontx5x7_char_105
+                0xfff9d956                Fontx5x7_char_106
+                0xfff9d95d                Fontx5x7_char_107
+                0xfff9d964                Fontx5x7_char_108
+                0xfff9d96b                Fontx5x7_char_109
+                0xfff9d972                Fontx5x7_char_110
+                0xfff9d979                Fontx5x7_char_111
+                0xfff9d980                Fontx5x7_char_112
+                0xfff9d987                Fontx5x7_char_113
+                0xfff9d98e                Fontx5x7_char_114
+                0xfff9d995                Fontx5x7_char_115
+                0xfff9d99c                Fontx5x7_char_116
+                0xfff9d9a3                Fontx5x7_char_117
+                0xfff9d9aa                Fontx5x7_char_118
+                0xfff9d9b1                Fontx5x7_char_119
+                0xfff9d9b8                Fontx5x7_char_120
+                0xfff9d9bf                Fontx5x7_char_121
+                0xfff9d9c6                Fontx5x7_char_122
+                0xfff9d9cd                Fontx5x7_char_123
+                0xfff9d9d4                Fontx5x7_char_124
+                0xfff9d9db                Fontx5x7_char_125
+                0xfff9d9e2                Fontx5x7_char_126
+                0xfff9d9ec                Fontx5x7_table
+ C              0xfff9ddec      0xaf4 ./src/fw/GLCD/font_x6x13.o
+                0xfff9ddec                Fontx6x13_char_0
+                0xfff9ddfa                Fontx6x13_char_1
+                0xfff9de08                Fontx6x13_char_2
+                0xfff9de16                Fontx6x13_char_3
+                0xfff9de24                Fontx6x13_char_4
+                0xfff9de32                Fontx6x13_char_5
+                0xfff9de40                Fontx6x13_char_6
+                0xfff9de4e                Fontx6x13_char_7
+                0xfff9de5c                Fontx6x13_char_8
+                0xfff9de6a                Fontx6x13_char_9
+                0xfff9de78                Fontx6x13_char_10
+                0xfff9de86                Fontx6x13_char_11
+                0xfff9de94                Fontx6x13_char_12
+                0xfff9dea2                Fontx6x13_char_13
+                0xfff9deb0                Fontx6x13_char_14
+                0xfff9debe                Fontx6x13_char_15
+                0xfff9decc                Fontx6x13_char_16
+                0xfff9deda                Fontx6x13_char_17
+                0xfff9dee8                Fontx6x13_char_18
+                0xfff9def6                Fontx6x13_char_19
+                0xfff9df04                Fontx6x13_char_20
+                0xfff9df12                Fontx6x13_char_21
+                0xfff9df20                Fontx6x13_char_22
+                0xfff9df2e                Fontx6x13_char_23
+                0xfff9df3c                Fontx6x13_char_24
+                0xfff9df4a                Fontx6x13_char_25
+                0xfff9df58                Fontx6x13_char_26
+                0xfff9df66                Fontx6x13_char_27
+                0xfff9df74                Fontx6x13_char_28
+                0xfff9df82                Fontx6x13_char_29
+                0xfff9df90                Fontx6x13_char_30
+                0xfff9df9e                Fontx6x13_char_31
+                0xfff9dfac                Fontx6x13_char_32
+                0xfff9dfba                Fontx6x13_char_33
+                0xfff9dfc8                Fontx6x13_char_34
+                0xfff9dfd6                Fontx6x13_char_35
+                0xfff9dfe4                Fontx6x13_char_36
+                0xfff9dff2                Fontx6x13_char_37
+                0xfff9e000                Fontx6x13_char_38
+                0xfff9e00e                Fontx6x13_char_39
+                0xfff9e01c                Fontx6x13_char_40
+                0xfff9e02a                Fontx6x13_char_41
+                0xfff9e038                Fontx6x13_char_42
+                0xfff9e046                Fontx6x13_char_43
+                0xfff9e054                Fontx6x13_char_44
+                0xfff9e062                Fontx6x13_char_45
+                0xfff9e070                Fontx6x13_char_46
+                0xfff9e07e                Fontx6x13_char_47
+                0xfff9e08c                Fontx6x13_char_48
+                0xfff9e09a                Fontx6x13_char_49
+                0xfff9e0a8                Fontx6x13_char_50
+                0xfff9e0b6                Fontx6x13_char_51
+                0xfff9e0c4                Fontx6x13_char_52
+                0xfff9e0d2                Fontx6x13_char_53
+                0xfff9e0e0                Fontx6x13_char_54
+                0xfff9e0ee                Fontx6x13_char_55
+                0xfff9e0fc                Fontx6x13_char_56
+                0xfff9e10a                Fontx6x13_char_57
+                0xfff9e118                Fontx6x13_char_58
+                0xfff9e126                Fontx6x13_char_59
+                0xfff9e134                Fontx6x13_char_60
+                0xfff9e142                Fontx6x13_char_61
+                0xfff9e150                Fontx6x13_char_62
+                0xfff9e15e                Fontx6x13_char_63
+                0xfff9e16c                Fontx6x13_char_64
+                0xfff9e17a                Fontx6x13_char_65
+                0xfff9e188                Fontx6x13_char_66
+                0xfff9e196                Fontx6x13_char_67
+                0xfff9e1a4                Fontx6x13_char_68
+                0xfff9e1b2                Fontx6x13_char_69
+                0xfff9e1c0                Fontx6x13_char_70
+                0xfff9e1ce                Fontx6x13_char_71
+                0xfff9e1dc                Fontx6x13_char_72
+                0xfff9e1ea                Fontx6x13_char_73
+                0xfff9e1f8                Fontx6x13_char_74
+                0xfff9e206                Fontx6x13_char_75
+                0xfff9e214                Fontx6x13_char_76
+                0xfff9e222                Fontx6x13_char_77
+                0xfff9e230                Fontx6x13_char_78
+                0xfff9e23e                Fontx6x13_char_79
+                0xfff9e24c                Fontx6x13_char_80
+                0xfff9e25a                Fontx6x13_char_81
+                0xfff9e268                Fontx6x13_char_82
+                0xfff9e276                Fontx6x13_char_83
+                0xfff9e284                Fontx6x13_char_84
+                0xfff9e292                Fontx6x13_char_85
+                0xfff9e2a0                Fontx6x13_char_86
+                0xfff9e2ae                Fontx6x13_char_87
+                0xfff9e2bc                Fontx6x13_char_88
+                0xfff9e2ca                Fontx6x13_char_89
+                0xfff9e2d8                Fontx6x13_char_90
+                0xfff9e2e6                Fontx6x13_char_91
+                0xfff9e2f4                Fontx6x13_char_92
+                0xfff9e302                Fontx6x13_char_93
+                0xfff9e310                Fontx6x13_char_94
+                0xfff9e31e                Fontx6x13_char_95
+                0xfff9e32c                Fontx6x13_char_96
+                0xfff9e33a                Fontx6x13_char_97
+                0xfff9e348                Fontx6x13_char_98
+                0xfff9e356                Fontx6x13_char_99
+                0xfff9e364                Fontx6x13_char_100
+                0xfff9e372                Fontx6x13_char_101
+                0xfff9e380                Fontx6x13_char_102
+                0xfff9e38e                Fontx6x13_char_103
+                0xfff9e39c                Fontx6x13_char_104
+                0xfff9e3aa                Fontx6x13_char_105
+                0xfff9e3b8                Fontx6x13_char_106
+                0xfff9e3c6                Fontx6x13_char_107
+                0xfff9e3d4                Fontx6x13_char_108
+                0xfff9e3e2                Fontx6x13_char_109
+                0xfff9e3f0                Fontx6x13_char_110
+                0xfff9e3fe                Fontx6x13_char_111
+                0xfff9e40c                Fontx6x13_char_112
+                0xfff9e41a                Fontx6x13_char_113
+                0xfff9e428                Fontx6x13_char_114
+                0xfff9e436                Fontx6x13_char_115
+                0xfff9e444                Fontx6x13_char_116
+                0xfff9e452                Fontx6x13_char_117
+                0xfff9e460                Fontx6x13_char_118
+                0xfff9e46e                Fontx6x13_char_119
+                0xfff9e47c                Fontx6x13_char_120
+                0xfff9e48a                Fontx6x13_char_121
+                0xfff9e498                Fontx6x13_char_122
+                0xfff9e4a6                Fontx6x13_char_123
+                0xfff9e4b4                Fontx6x13_char_124
+                0xfff9e4c2                Fontx6x13_char_125
+                0xfff9e4d0                Fontx6x13_char_126
+                0xfff9e4e0                Fontx6x13_table
+ C              0xfff9e8e0      0x228 libRenesasRX62N.a(frmwri.o)
+                0xfff9eb08                _erodata = .
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame
+ *(.eh_frame)
+
+.jcr
+ *(.jcr)
+
+.tors           0xfff9eb08        0x0
+                0xfff9eb08                __CTOR_LIST__ = .
+                0xfff9eb08                ___ctors = .
+ *(.ctors)
+                0xfff9eb08                ___ctors_end = .
+                0xfff9eb08                __CTOR_END__ = .
+                0xfff9eb08                __DTOR_LIST__ = .
+                0xfff9eb08                ___dtors = .
+ *(.dtors)
+                0xfff9eb08                ___dtors_end = .
+                0xfff9eb08                __DTOR_END__ = .
+                0xfff9eb08                _mdata = .
+
+.istack         0x00017ffc        0x0
+                0x00017ffc                _istack = .
+
+.ustack         0x000179bc        0x0
+                0x000179bc                _ustack = .
+
+.data           0x00001000       0x4c load address 0xfff9eb08
+                0x00001000                _data = .
+ *(.data)
+ *(.data.*)
+ *(D)
+ D              0x00001000       0x40 ./src/sw/webserver/httpd-cgi.o
+ D              0x00001040        0x4 ./src/sw/task/IntQueue.o
+ D              0x00001044        0x4 ./src/sw/MemMang/heap_2.o
+ D              0x00001048        0x4 ./src/sw/FreeRTOS/tasks.o
+ *(D_1)
+ D_1            0x0000104c        0x0 ./src/sw/webserver/EMAC.o
+ D_1            0x0000104c        0x0 ./src/sw/webserver/httpd-cgi.o
+ D_1            0x0000104c        0x0 ./src/sw/webserver/phy.o
+ D_1            0x0000104c        0x0 ./src/sw/task/BlockQ.o
+ D_1            0x0000104c        0x0 ./src/sw/task/GenQTest.o
+ D_1            0x0000104c        0x0 ./src/sw/task/IntQueue.o
+ D_1            0x0000104c        0x0 ./src/sw/task/PollQ.o
+ D_1            0x0000104c        0x0 ./src/sw/task/QPeek.o
+ D_1            0x0000104c        0x0 ./src/sw/task/blocktim.o
+ D_1            0x0000104c        0x0 ./src/sw/task/flash.o
+ D_1            0x0000104c        0x0 ./src/sw/task/flop.o
+ D_1            0x0000104c        0x0 ./src/sw/task/integer.o
+ D_1            0x0000104c        0x0 ./src/sw/task/recmutex.o
+ D_1            0x0000104c        0x0 ./src/sw/task/semtest.o
+ D_1            0x0000104c        0x0 ./src/sw/task/sw_task_glcd.o
+ D_1            0x0000104c        0x0 ./src/sw/task/uIP_Task.o
+ D_1            0x0000104c        0x0 ./src/sw/MemMang/heap_2.o
+ D_1            0x0000104c        0x0 ./src/sw/FreeTCPIP/psock.o
+ D_1            0x0000104c        0x0 ./src/sw/FreeTCPIP/timer.o
+ D_1            0x0000104c        0x0 ./src/sw/FreeTCPIP/uip.o
+ D_1            0x0000104c        0x0 ./src/sw/FreeTCPIP/uip_arp.o
+ D_1            0x0000104c        0x0 ./src/sw/FreeTCPIP/apps/httpd/http-strings.o
+ D_1            0x0000104c        0x0 ./src/sw/FreeTCPIP/apps/httpd/httpd-fs.o
+ D_1            0x0000104c        0x0 ./src/sw/FreeTCPIP/apps/httpd/httpd.o
+ D_1            0x0000104c        0x0 ./src/sw/FreeRTOS/croutine.o
+ D_1            0x0000104c        0x0 ./src/sw/FreeRTOS/list.o
+ D_1            0x0000104c        0x0 ./src/sw/FreeRTOS/queue.o
+ D_1            0x0000104c        0x0 ./src/sw/FreeRTOS/tasks.o
+ D_1            0x0000104c        0x0 ./src/sw/FreeRTOS/timers.o
+ D_1            0x0000104c        0x0 ./src/sw/FreeRTOS/port/port.o
+ D_1            0x0000104c        0x0 ./src/HighFrequencyTimerTest.o
+ D_1            0x0000104c        0x0 ./src/IntQueueTimer.o
+ D_1            0x0000104c        0x0 ./src/mainl.o
+ D_1            0x0000104c        0x0 ./src/fw/fw_setup.o
+ D_1            0x0000104c        0x0 ./src/fw/hwinit.o
+ D_1            0x0000104c        0x0 ./src/fw/hwsetup.o
+ D_1            0x0000104c        0x0 ./src/fw/inthandler.o
+ D_1            0x0000104c        0x0 ./src/fw/start.o
+ D_1            0x0000104c        0x0 ./src/fw/vects.o
+ D_1            0x0000104c        0x0 ./src/fw/TMR/fw_tmr0.o
+ D_1            0x0000104c        0x0 ./src/fw/TMR/fw_tmr1.o
+ D_1            0x0000104c        0x0 ./src/fw/TMR/fw_tmr2.o
+ D_1            0x0000104c        0x0 ./src/fw/SWINT/fw_swint.o
+ D_1            0x0000104c        0x0 ./src/fw/SW/fw_sw.o
+ D_1            0x0000104c        0x0 ./src/fw/SPI/fw_spi.o
+ D_1            0x0000104c        0x0 ./src/fw/SCI/fw_sci2.o
+ D_1            0x0000104c        0x0 ./src/fw/LED/fw_led.o
+ D_1            0x0000104c        0x0 ./src/fw/IRQ/fw_irq10.o
+ D_1            0x0000104c        0x0 ./src/fw/IRQ/fw_irq15.o
+ D_1            0x0000104c        0x0 ./src/fw/IRQ/fw_irq8.o
+ D_1            0x0000104c        0x0 ./src/fw/IRQ/fw_irq9.o
+ D_1            0x0000104c        0x0 ./src/fw/GLCD/font_8x16.o
+ D_1            0x0000104c        0x0 ./src/fw/GLCD/font_8x8.o
+ D_1            0x0000104c        0x0 ./src/fw/GLCD/font_bitmap.o
+ D_1            0x0000104c        0x0 ./src/fw/GLCD/font_helvr10.o
+ D_1            0x0000104c        0x0 ./src/fw/GLCD/font_winfreesystem14x16.o
+ D_1            0x0000104c        0x0 ./src/fw/GLCD/font_x5x7.o
+ D_1            0x0000104c        0x0 ./src/fw/GLCD/font_x6x13.o
+ D_1            0x0000104c        0x0 ./src/fw/GLCD/fw_glcd.o
+ D_1            0x0000104c        0x0 ./src/fw/ETH/fw_eth.o
+ D_1            0x0000104c        0x0 ./src/fw/Clock/fw_clock.o
+ D_1            0x0000104c        0x0 ./src/fw/CMT/cmt0.o
+ D_1            0x0000104c        0x0 ./src/fw/AD/fw_ad.o
+ D_1            0x0000104c        0x0 libRenesasRX62N.a(memcmp.o)
+ D_1            0x0000104c        0x0 libRenesasRX62N.a(memcpy.o)
+ D_1            0x0000104c        0x0 libRenesasRX62N.a(memset.o)
+ D_1            0x0000104c        0x0 libRenesasRX62N.a(sprintf.o)
+ D_1            0x0000104c        0x0 libRenesasRX62N.a(strchr.o)
+ D_1            0x0000104c        0x0 libRenesasRX62N.a(strcpy.o)
+ D_1            0x0000104c        0x0 libRenesasRX62N.a(strlen.o)
+ D_1            0x0000104c        0x0 libRenesasRX62N.a(strncmp.o)
+ D_1            0x0000104c        0x0 libRenesasRX62N.a(strncpy.o)
+ D_1            0x0000104c        0x0 libRenesasRX62N.a(strrchr.o)
+ D_1            0x0000104c        0x0 libRenesasRX62N.a(strstr.o)
+ D_1            0x0000104c        0x0 libRenesasRX62N.a(frmwri.o)
+ *(D_2)
+                0x0000104c                _edata = .
+
+.gcc_exc
+ *(.gcc_exc)
+
+.bss            0x00001050    0x11958 load address 0xfff9eb60
+                0x00001050                _bss = .
+ *(.bss)
+ *(.bss.*)
+ *(COMMON)
+ COMMON         0x00001050        0x8 ./src/sw/webserver/httpd-cgi.o
+                0x00001050                pcStatus
+                0x00001054                ulString
+ COMMON         0x00001058       0x10 ./src/sw/task/IntQueue.o
+                0x00001058                xHighPriorityNormallyFullTask1
+                0x0000105c                xHighPriorityNormallyEmptyTask2
+                0x00001060                xHighPriorityNormallyFullTask2
+                0x00001064                xHighPriorityNormallyEmptyTask1
+ COMMON         0x00001068        0xc ./src/sw/task/QPeek.o
+                0x00001068                xMediumPriorityTask
+                0x0000106c                xHighestPriorityTask
+                0x00001070                xHighPriorityTask
+ COMMON         0x00001074     0x208c ./src/sw/FreeTCPIP/uip.o
+                0x00001074                uip_conn
+                0x00001078                uip_len
+                0x0000107a                uip_draddr
+                0x0000107e                uip_slen
+                0x00001080                uip_stat
+                0x000010b8                uip_listenports
+                0x00001108                uip_flags
+                0x0000110c                uip_sappdata
+                0x00001110                uip_conns
+                0x000030f0                uip_appdata
+                0x000030f4                uip_hostaddr
+                0x000030f8                uip_netmask
+                0x000030fc                uip_acc32
+ COMMON         0x00003100        0x1 ./src/mainl.o
+                0x00003100                auxData
+ *fill*         0x00003101        0x3 00
+ COMMON         0x00003104        0x9 ./src/fw/TMR/fw_tmr2.o
+                0x00003104                j
+                0x00003108                i
+                0x0000310c                k
+ COMMON         0x0000310d      0x300 ./src/fw/GLCD/fw_glcd.o
+                0x0000310d                fw_glcd_display
+ *(B)
+ *fill*         0x0000340d        0x3 00
+ B              0x00003410        0x4 ./src/sw/webserver/EMAC.o
+                0x00003410                uip_buf
+ B              0x00003414        0x4 ./src/sw/webserver/httpd-cgi.o
+                0x00003414                lRefreshCount
+ B              0x00003418        0x8 ./src/sw/task/IntQueue.o
+                0x00003418                uxValueForNormallyEmptyQueue
+                0x0000341c                uxValueForNormallyFullQueue
+ B              0x00003420        0x4 ./src/sw/task/uIP_Task.o
+                0x00003420                xEMACEventQueue
+ B              0x00003424        0x8 ./src/sw/FreeTCPIP/uip.o
+                0x00003424                uip_ethaddr
+ B              0x0000342c        0x4 ./src/sw/FreeRTOS/croutine.o
+                0x0000342c                pxCurrentCoRoutine
+ B              0x00003430        0x4 ./src/sw/FreeRTOS/tasks.o
+                0x00003430                pxCurrentTCB
+ B              0x00003434        0x8 ./src/HighFrequencyTimerTest.o
+                0x00003434                usMaxJitter
+                0x00003438                ulHighFrequencyTickCount
+ B              0x0000343c        0x8 ./src/mainl.o
+                0x0000343c                ulRegTest1CycleCount
+                0x00003440                ulRegTest2CycleCount
+ B              0x00003444        0x4 ./src/fw/GLCD/fw_glcd.o
+                0x00003444                fw_glcd_actual_pos_x
+                0x00003445                fw_glcd_actual_pos_y
+ *(B_1)
+ *fill*         0x00003448        0x8 00
+ B_1            0x00003450     0x3a80 ./src/sw/webserver/EMAC.o
+ B_1            0x00006ed0      0x148 ./src/sw/webserver/httpd-cgi.o
+ B_1            0x00007018        0x0 ./src/sw/webserver/phy.o
+ B_1            0x00007018       0x18 ./src/sw/task/BlockQ.o
+ B_1            0x00007030       0x20 ./src/sw/task/GenQTest.o
+ B_1            0x00007050      0x1c8 ./src/sw/task/IntQueue.o
+ B_1            0x00007218        0xc ./src/sw/task/PollQ.o
+ B_1            0x00007224        0xc ./src/sw/task/QPeek.o
+ B_1            0x00007230       0x20 ./src/sw/task/blocktim.o
+ B_1            0x00007250        0x4 ./src/sw/task/flash.o
+ B_1            0x00007254       0x20 ./src/sw/task/flop.o
+ B_1            0x00007274        0x4 ./src/sw/task/integer.o
+ B_1            0x00007278       0x30 ./src/sw/task/recmutex.o
+ B_1            0x000072a8       0x12 ./src/sw/task/semtest.o
+ B_1            0x000072ba        0x0 ./src/sw/task/sw_task_glcd.o
+ B_1            0x000072ba        0x0 ./src/sw/task/uIP_Task.o
+ *fill*         0x000072ba        0x2 00
+ B_1            0x000072bc     0xb414 ./src/sw/MemMang/heap_2.o
+ B_1            0x000126d0        0x0 ./src/sw/FreeTCPIP/psock.o
+ B_1            0x000126d0        0x0 ./src/sw/FreeTCPIP/timer.o
+ B_1            0x000126d0        0xc ./src/sw/FreeTCPIP/uip.o
+ B_1            0x000126dc       0x68 ./src/sw/FreeTCPIP/uip_arp.o
+ B_1            0x00012744        0x0 ./src/sw/FreeTCPIP/apps/httpd/http-strings.o
+ B_1            0x00012744       0x10 ./src/sw/FreeTCPIP/apps/httpd/httpd-fs.o
+ B_1            0x00012754        0x0 ./src/sw/FreeTCPIP/apps/httpd/httpd.o
+ B_1            0x00012754       0x7c ./src/sw/FreeRTOS/croutine.o
+ B_1            0x000127d0        0x0 ./src/sw/FreeRTOS/list.o
+ B_1            0x000127d0        0x0 ./src/sw/FreeRTOS/queue.o
+ B_1            0x000127d0      0x18c ./src/sw/FreeRTOS/tasks.o
+ B_1            0x0001295c       0x38 ./src/sw/FreeRTOS/timers.o
+ B_1            0x00012994        0x0 ./src/sw/FreeRTOS/port/port.o
+ B_1            0x00012994        0x8 ./src/HighFrequencyTimerTest.o
+ B_1            0x0001299c        0x0 ./src/IntQueueTimer.o
+ B_1            0x0001299c        0xc ./src/mainl.o
+ B_1            0x000129a8        0x0 ./src/fw/fw_setup.o
+ B_1            0x000129a8        0x0 ./src/fw/hwinit.o
+ B_1            0x000129a8        0x0 ./src/fw/hwsetup.o
+ B_1            0x000129a8        0x0 ./src/fw/inthandler.o
+ B_1            0x000129a8        0x0 ./src/fw/start.o
+ B_1            0x000129a8        0x0 ./src/fw/vects.o
+ B_1            0x000129a8        0x0 ./src/fw/TMR/fw_tmr0.o
+ B_1            0x000129a8        0x0 ./src/fw/TMR/fw_tmr1.o
+ B_1            0x000129a8        0x0 ./src/fw/TMR/fw_tmr2.o
+ B_1            0x000129a8        0x0 ./src/fw/SWINT/fw_swint.o
+ B_1            0x000129a8        0x0 ./src/fw/SW/fw_sw.o
+ B_1            0x000129a8        0x0 ./src/fw/SPI/fw_spi.o
+ B_1            0x000129a8        0x0 ./src/fw/SCI/fw_sci2.o
+ B_1            0x000129a8        0x0 ./src/fw/LED/fw_led.o
+ B_1            0x000129a8        0x0 ./src/fw/IRQ/fw_irq10.o
+ B_1            0x000129a8        0x0 ./src/fw/IRQ/fw_irq15.o
+ B_1            0x000129a8        0x0 ./src/fw/IRQ/fw_irq8.o
+ B_1            0x000129a8        0x0 ./src/fw/IRQ/fw_irq9.o
+ B_1            0x000129a8        0x0 ./src/fw/GLCD/font_8x16.o
+ B_1            0x000129a8        0x0 ./src/fw/GLCD/font_8x8.o
+ B_1            0x000129a8        0x0 ./src/fw/GLCD/font_bitmap.o
+ B_1            0x000129a8        0x0 ./src/fw/GLCD/font_helvr10.o
+ B_1            0x000129a8        0x0 ./src/fw/GLCD/font_winfreesystem14x16.o
+ B_1            0x000129a8        0x0 ./src/fw/GLCD/font_x5x7.o
+ B_1            0x000129a8        0x0 ./src/fw/GLCD/font_x6x13.o
+ B_1            0x000129a8        0x0 ./src/fw/GLCD/fw_glcd.o
+ B_1            0x000129a8        0x0 ./src/fw/ETH/fw_eth.o
+ B_1            0x000129a8        0x0 ./src/fw/Clock/fw_clock.o
+ B_1            0x000129a8        0x0 ./src/fw/CMT/cmt0.o
+ B_1            0x000129a8        0x0 ./src/fw/AD/fw_ad.o
+ B_1            0x000129a8        0x0 libRenesasRX62N.a(memcmp.o)
+ B_1            0x000129a8        0x0 libRenesasRX62N.a(memcpy.o)
+ B_1            0x000129a8        0x0 libRenesasRX62N.a(memset.o)
+ B_1            0x000129a8        0x0 libRenesasRX62N.a(sprintf.o)
+ B_1            0x000129a8        0x0 libRenesasRX62N.a(strchr.o)
+ B_1            0x000129a8        0x0 libRenesasRX62N.a(strcpy.o)
+ B_1            0x000129a8        0x0 libRenesasRX62N.a(strlen.o)
+ B_1            0x000129a8        0x0 libRenesasRX62N.a(strncmp.o)
+ B_1            0x000129a8        0x0 libRenesasRX62N.a(strncpy.o)
+ B_1            0x000129a8        0x0 libRenesasRX62N.a(strrchr.o)
+ B_1            0x000129a8        0x0 libRenesasRX62N.a(strstr.o)
+ B_1            0x000129a8        0x0 libRenesasRX62N.a(frmwri.o)
+ *(B_2)
+                0x000129a8                _ebss = .
+                0x000129a8                _end = .
+LOAD ./src/sw/webserver/EMAC.o
+LOAD ./src/sw/webserver/httpd-cgi.o
+LOAD ./src/sw/webserver/phy.o
+LOAD ./src/sw/task/BlockQ.o
+LOAD ./src/sw/task/GenQTest.o
+LOAD ./src/sw/task/IntQueue.o
+LOAD ./src/sw/task/PollQ.o
+LOAD ./src/sw/task/QPeek.o
+LOAD ./src/sw/task/blocktim.o
+LOAD ./src/sw/task/flash.o
+LOAD ./src/sw/task/flop.o
+LOAD ./src/sw/task/integer.o
+LOAD ./src/sw/task/recmutex.o
+LOAD ./src/sw/task/semtest.o
+LOAD ./src/sw/task/sw_task_glcd.o
+LOAD ./src/sw/task/uIP_Task.o
+LOAD ./src/sw/MemMang/heap_2.o
+LOAD ./src/sw/FreeTCPIP/psock.o
+LOAD ./src/sw/FreeTCPIP/timer.o
+LOAD ./src/sw/FreeTCPIP/uip.o
+LOAD ./src/sw/FreeTCPIP/uip_arp.o
+LOAD ./src/sw/FreeTCPIP/apps/httpd/http-strings.o
+LOAD ./src/sw/FreeTCPIP/apps/httpd/httpd-fs.o
+LOAD ./src/sw/FreeTCPIP/apps/httpd/httpd.o
+LOAD ./src/sw/FreeRTOS/croutine.o
+LOAD ./src/sw/FreeRTOS/list.o
+LOAD ./src/sw/FreeRTOS/queue.o
+LOAD ./src/sw/FreeRTOS/tasks.o
+LOAD ./src/sw/FreeRTOS/timers.o
+LOAD ./src/sw/FreeRTOS/port/port.o
+LOAD ./src/HighFrequencyTimerTest.o
+LOAD ./src/IntQueueTimer.o
+LOAD ./src/mainl.o
+LOAD ./src/fw/fw_setup.o
+LOAD ./src/fw/hwinit.o
+LOAD ./src/fw/hwsetup.o
+LOAD ./src/fw/inthandler.o
+LOAD ./src/fw/start.o
+LOAD ./src/fw/vects.o
+LOAD ./src/fw/TMR/fw_tmr0.o
+LOAD ./src/fw/TMR/fw_tmr1.o
+LOAD ./src/fw/TMR/fw_tmr2.o
+LOAD ./src/fw/SWINT/fw_swint.o
+LOAD ./src/fw/SW/fw_sw.o
+LOAD ./src/fw/SPI/fw_spi.o
+LOAD ./src/fw/SCI/fw_sci2.o
+LOAD ./src/fw/LED/fw_led.o
+LOAD ./src/fw/IRQ/fw_irq10.o
+LOAD ./src/fw/IRQ/fw_irq15.o
+LOAD ./src/fw/IRQ/fw_irq8.o
+LOAD ./src/fw/IRQ/fw_irq9.o
+LOAD ./src/fw/GLCD/font_8x16.o
+LOAD ./src/fw/GLCD/font_8x8.o
+LOAD ./src/fw/GLCD/font_bitmap.o
+LOAD ./src/fw/GLCD/font_helvr10.o
+LOAD ./src/fw/GLCD/font_winfreesystem14x16.o
+LOAD ./src/fw/GLCD/font_x5x7.o
+LOAD ./src/fw/GLCD/font_x6x13.o
+LOAD ./src/fw/GLCD/fw_glcd.o
+LOAD ./src/fw/ETH/fw_eth.o
+LOAD ./src/fw/Clock/fw_clock.o
+LOAD ./src/fw/CMT/cmt0.o
+LOAD ./src/fw/AD/fw_ad.o
+LOAD libRenesasRX62N.a
+START GROUP
+LOAD C:\Renesas\e2studio\GNURXV~1.03-\rx-elf\lib\gcc\rx-elf\4.7-GNURX_v12.03\libgcc.a
+LOAD E:\Pessoal\Projetos_Pessoal\FreeRTOS\FreeRTOSV7.4.2\FreeRTOSV7.4.2\FreeRTOS\Demo\RX600_RX62N-RDK_GNURX\RTOSDemo\Debug\libRenesasRX62N.a
+END GROUP
+OUTPUT(RenesasRX62N.x elf32-rx-le)
+
+.debug_frame    0x00000000     0x4234
+ .debug_frame   0x00000000      0x1e4 ./src/sw/webserver/EMAC.o
+ .debug_frame   0x000001e4      0x23c ./src/sw/webserver/httpd-cgi.o
+ .debug_frame   0x00000420      0x1e8 ./src/sw/webserver/phy.o
+ .debug_frame   0x00000608       0xb4 ./src/sw/task/BlockQ.o
+ .debug_frame   0x000006bc       0xf8 ./src/sw/task/GenQTest.o
+ .debug_frame   0x000007b4      0x1ec ./src/sw/task/IntQueue.o
+ .debug_frame   0x000009a0       0xb0 ./src/sw/task/PollQ.o
+ .debug_frame   0x00000a50       0xec ./src/sw/task/QPeek.o
+ .debug_frame   0x00000b3c       0xb0 ./src/sw/task/blocktim.o
+ .debug_frame   0x00000bec       0x60 ./src/sw/task/flash.o
+ .debug_frame   0x00000c4c      0x100 ./src/sw/task/flop.o
+ .debug_frame   0x00000d4c       0x8c ./src/sw/task/integer.o
+ .debug_frame   0x00000dd8       0xd8 ./src/sw/task/recmutex.o
+ .debug_frame   0x00000eb0       0x8c ./src/sw/task/semtest.o
+ .debug_frame   0x00000f3c       0x6c ./src/sw/task/sw_task_glcd.o
+ .debug_frame   0x00000fa8       0xf8 ./src/sw/task/uIP_Task.o
+ .debug_frame   0x000010a0       0xc4 ./src/sw/MemMang/heap_2.o
+ .debug_frame   0x00001164      0x1f4 ./src/sw/FreeTCPIP/psock.o
+ .debug_frame   0x00001358       0xdc ./src/sw/FreeTCPIP/timer.o
+ .debug_frame   0x00001434      0x2a8 ./src/sw/FreeTCPIP/uip.o
+ .debug_frame   0x000016dc       0xd4 ./src/sw/FreeTCPIP/uip_arp.o
+ .debug_frame   0x000017b0       0xb4 ./src/sw/FreeTCPIP/apps/httpd/httpd-fs.o
+ .debug_frame   0x00001864      0x1b8 ./src/sw/FreeTCPIP/apps/httpd/httpd.o
+ .debug_frame   0x00001a1c      0x128 ./src/sw/FreeRTOS/croutine.o
+ .debug_frame   0x00001b44       0xd8 ./src/sw/FreeRTOS/list.o
+ .debug_frame   0x00001c1c      0x38c ./src/sw/FreeRTOS/queue.o
+ .debug_frame   0x00001fa8      0x6f0 ./src/sw/FreeRTOS/tasks.o
+ .debug_frame   0x00002698      0x22c ./src/sw/FreeRTOS/timers.o
+ .debug_frame   0x000028c4       0xec ./src/sw/FreeRTOS/port/port.o
+ .debug_frame   0x000029b0       0x60 ./src/HighFrequencyTimerTest.o
+ .debug_frame   0x00002a10       0xa0 ./src/IntQueueTimer.o
+ .debug_frame   0x00002ab0      0x14c ./src/mainl.o
+ .debug_frame   0x00002bfc       0x30 ./src/fw/fw_setup.o
+ .debug_frame   0x00002c2c       0x2c ./src/fw/hwinit.o
+ .debug_frame   0x00002c58       0x34 ./src/fw/hwsetup.o
+ .debug_frame   0x00002c8c      0xd04 ./src/fw/inthandler.o
+ .debug_frame   0x00003990       0xa4 ./src/fw/TMR/fw_tmr0.o
+ .debug_frame   0x00003a34       0xa4 ./src/fw/TMR/fw_tmr1.o
+ .debug_frame   0x00003ad8       0xb4 ./src/fw/TMR/fw_tmr2.o
+ .debug_frame   0x00003b8c       0x6c ./src/fw/SWINT/fw_swint.o
+ .debug_frame   0x00003bf8       0x38 ./src/fw/SW/fw_sw.o
+ .debug_frame   0x00003c30       0x64 ./src/fw/SPI/fw_spi.o
+ .debug_frame   0x00003c94       0xac ./src/fw/SCI/fw_sci2.o
+ .debug_frame   0x00003d40       0x38 ./src/fw/LED/fw_led.o
+ .debug_frame   0x00003d78       0x5c ./src/fw/IRQ/fw_irq10.o
+ .debug_frame   0x00003dd4       0x5c ./src/fw/IRQ/fw_irq15.o
+ .debug_frame   0x00003e30       0x5c ./src/fw/IRQ/fw_irq8.o
+ .debug_frame   0x00003e8c       0x5c ./src/fw/IRQ/fw_irq9.o
+ .debug_frame   0x00003ee8      0x1c0 ./src/fw/GLCD/fw_glcd.o
+ .debug_frame   0x000040a8       0x88 ./src/fw/ETH/fw_eth.o
+ .debug_frame   0x00004130       0x38 ./src/fw/Clock/fw_clock.o
+ .debug_frame   0x00004168       0x5c ./src/fw/CMT/cmt0.o
+ .debug_frame   0x000041c4       0x70 ./src/fw/AD/fw_ad.o
+
+.debug_info     0x00000000    0x3614b
+ .debug_info    0x00000000     0x3181 ./src/sw/webserver/EMAC.o
+ .debug_info    0x00003181     0x10db ./src/sw/webserver/httpd-cgi.o
+ .debug_info    0x0000425c      0xb25 ./src/sw/webserver/phy.o
+ .debug_info    0x00004d81      0x2ec ./src/sw/task/BlockQ.o
+ .debug_info    0x0000506d      0x27a ./src/sw/task/GenQTest.o
+ .debug_info    0x000052e7      0x63a ./src/sw/task/IntQueue.o
+ .debug_info    0x00005921      0x1ba ./src/sw/task/PollQ.o
+ .debug_info    0x00005adb      0x261 ./src/sw/task/QPeek.o
+ .debug_info    0x00005d3c      0x226 ./src/sw/task/blocktim.o
+ .debug_info    0x00005f62      0x11c ./src/sw/task/flash.o
+ .debug_info    0x0000607e      0x380 ./src/sw/task/flop.o
+ .debug_info    0x000063fe      0x16e ./src/sw/task/integer.o
+ .debug_info    0x0000656c      0x238 ./src/sw/task/recmutex.o
+ .debug_info    0x000067a4      0x24d ./src/sw/task/semtest.o
+ .debug_info    0x000069f1      0x587 ./src/sw/task/sw_task_glcd.o
+ .debug_info    0x00006f78      0xebd ./src/sw/task/uIP_Task.o
+ .debug_info    0x00007e35      0x2ae ./src/sw/MemMang/heap_2.o
+ .debug_info    0x000080e3      0x787 ./src/sw/FreeTCPIP/psock.o
+ .debug_info    0x0000886a      0x17f ./src/sw/FreeTCPIP/timer.o
+ .debug_info    0x000089e9      0xecf ./src/sw/FreeTCPIP/uip.o
+ .debug_info    0x000098b8      0x496 ./src/sw/FreeTCPIP/uip_arp.o
+ .debug_info    0x00009d4e      0x449 ./src/sw/FreeTCPIP/apps/httpd/http-strings.o
+ .debug_info    0x0000a197      0x4aa ./src/sw/FreeTCPIP/apps/httpd/httpd-fs.o
+ .debug_info    0x0000a641      0x8d9 ./src/sw/FreeTCPIP/apps/httpd/httpd.o
+ .debug_info    0x0000af1a      0x4c0 ./src/sw/FreeRTOS/croutine.o
+ .debug_info    0x0000b3da      0x2a1 ./src/sw/FreeRTOS/list.o
+ .debug_info    0x0000b67b      0x9cb ./src/sw/FreeRTOS/queue.o
+ .debug_info    0x0000c046     0x1234 ./src/sw/FreeRTOS/tasks.o
+ .debug_info    0x0000d27a      0x75d ./src/sw/FreeRTOS/timers.o
+ .debug_info    0x0000d9d7     0x1549 ./src/sw/FreeRTOS/port/port.o
+ .debug_info    0x0000ef20     0x1da2 ./src/HighFrequencyTimerTest.o
+ .debug_info    0x00010cc2     0x2462 ./src/IntQueueTimer.o
+ .debug_info    0x00013124     0x23c7 ./src/mainl.o
+ .debug_info    0x000154eb       0x79 ./src/fw/fw_setup.o
+ .debug_info    0x00015564       0x5f ./src/fw/hwinit.o
+ .debug_info    0x000155c3     0x176d ./src/fw/hwsetup.o
+ .debug_info    0x00016d30      0xc3c ./src/fw/inthandler.o
+ .debug_info    0x0001796c       0xbd ./src/fw/start.o
+ .debug_info    0x00017a29       0xbd ./src/fw/vects.o
+ .debug_info    0x00017ae6     0x1493 ./src/fw/TMR/fw_tmr0.o
+ .debug_info    0x00018f79     0x1481 ./src/fw/TMR/fw_tmr1.o
+ .debug_info    0x0001a3fa     0x14df ./src/fw/TMR/fw_tmr2.o
+ .debug_info    0x0001b8d9     0x1447 ./src/fw/SWINT/fw_swint.o
+ .debug_info    0x0001cd20      0x3b5 ./src/fw/SW/fw_sw.o
+ .debug_info    0x0001d0d5     0x2f83 ./src/fw/SPI/fw_spi.o
+ .debug_info    0x00020058     0x3026 ./src/fw/SCI/fw_sci2.o
+ .debug_info    0x0002307e      0x8b1 ./src/fw/LED/fw_led.o
+ .debug_info    0x0002392f      0xe10 ./src/fw/IRQ/fw_irq10.o
+ .debug_info    0x0002473f     0x1771 ./src/fw/IRQ/fw_irq15.o
+ .debug_info    0x00025eb0      0xe53 ./src/fw/IRQ/fw_irq8.o
+ .debug_info    0x00026d03      0xe10 ./src/fw/IRQ/fw_irq9.o
+ .debug_info    0x00027b13     0x1844 ./src/fw/GLCD/font_8x16.o
+ .debug_info    0x00029357     0x1839 ./src/fw/GLCD/font_8x8.o
+ .debug_info    0x0002ab90      0x2d6 ./src/fw/GLCD/font_bitmap.o
+ .debug_info    0x0002ae66      0x9b2 ./src/fw/GLCD/font_helvr10.o
+ .debug_info    0x0002b818      0x9b2 ./src/fw/GLCD/font_winfreesystem14x16.o
+ .debug_info    0x0002c1ca      0xc21 ./src/fw/GLCD/font_x5x7.o
+ .debug_info    0x0002cdeb      0xc2c ./src/fw/GLCD/font_x6x13.o
+ .debug_info    0x0002da17      0xb22 ./src/fw/GLCD/fw_glcd.o
+ .debug_info    0x0002e539     0x34d8 ./src/fw/ETH/fw_eth.o
+ .debug_info    0x00031a11      0xc91 ./src/fw/Clock/fw_clock.o
+ .debug_info    0x000326a2     0x21af ./src/fw/CMT/cmt0.o
+ .debug_info    0x00034851     0x18fa ./src/fw/AD/fw_ad.o
+
+.debug_abbrev   0x00000000     0x4561
+ .debug_abbrev  0x00000000      0x282 ./src/sw/webserver/EMAC.o
+ .debug_abbrev  0x00000282      0x22f ./src/sw/webserver/httpd-cgi.o
+ .debug_abbrev  0x000004b1      0x201 ./src/sw/webserver/phy.o
+ .debug_abbrev  0x000006b2      0x127 ./src/sw/task/BlockQ.o
+ .debug_abbrev  0x000007d9       0xe7 ./src/sw/task/GenQTest.o
+ .debug_abbrev  0x000008c0      0x11c ./src/sw/task/IntQueue.o
+ .debug_abbrev  0x000009dc       0xb1 ./src/sw/task/PollQ.o
+ .debug_abbrev  0x00000a8d       0xf8 ./src/sw/task/QPeek.o
+ .debug_abbrev  0x00000b85       0xe5 ./src/sw/task/blocktim.o
+ .debug_abbrev  0x00000c6a       0x95 ./src/sw/task/flash.o
+ .debug_abbrev  0x00000cff      0x130 ./src/sw/task/flop.o
+ .debug_abbrev  0x00000e2f       0xcc ./src/sw/task/integer.o
+ .debug_abbrev  0x00000efb       0xf4 ./src/sw/task/recmutex.o
+ .debug_abbrev  0x00000fef      0x100 ./src/sw/task/semtest.o
+ .debug_abbrev  0x000010ef      0x143 ./src/sw/task/sw_task_glcd.o
+ .debug_abbrev  0x00001232      0x251 ./src/sw/task/uIP_Task.o
+ .debug_abbrev  0x00001483      0x16e ./src/sw/MemMang/heap_2.o
+ .debug_abbrev  0x000015f1      0x234 ./src/sw/FreeTCPIP/psock.o
+ .debug_abbrev  0x00001825       0xe6 ./src/sw/FreeTCPIP/timer.o
+ .debug_abbrev  0x0000190b      0x2ab ./src/sw/FreeTCPIP/uip.o
+ .debug_abbrev  0x00001bb6      0x183 ./src/sw/FreeTCPIP/uip_arp.o
+ .debug_abbrev  0x00001d39       0x56 ./src/sw/FreeTCPIP/apps/httpd/http-strings.o
+ .debug_abbrev  0x00001d8f      0x139 ./src/sw/FreeTCPIP/apps/httpd/httpd-fs.o
+ .debug_abbrev  0x00001ec8      0x227 ./src/sw/FreeTCPIP/apps/httpd/httpd.o
+ .debug_abbrev  0x000020ef      0x187 ./src/sw/FreeRTOS/croutine.o
+ .debug_abbrev  0x00002276       0xbe ./src/sw/FreeRTOS/list.o
+ .debug_abbrev  0x00002334      0x186 ./src/sw/FreeRTOS/queue.o
+ .debug_abbrev  0x000024ba      0x207 ./src/sw/FreeRTOS/tasks.o
+ .debug_abbrev  0x000026c1      0x175 ./src/sw/FreeRTOS/timers.o
+ .debug_abbrev  0x00002836      0x216 ./src/sw/FreeRTOS/port/port.o
+ .debug_abbrev  0x00002a4c      0x150 ./src/HighFrequencyTimerTest.o
+ .debug_abbrev  0x00002b9c      0x10f ./src/IntQueueTimer.o
+ .debug_abbrev  0x00002cab      0x23b ./src/mainl.o
+ .debug_abbrev  0x00002ee6       0x53 ./src/fw/fw_setup.o
+ .debug_abbrev  0x00002f39       0x37 ./src/fw/hwinit.o
+ .debug_abbrev  0x00002f70       0xbf ./src/fw/hwsetup.o
+ .debug_abbrev  0x0000302f       0x44 ./src/fw/inthandler.o
+ .debug_abbrev  0x00003073       0x14 ./src/fw/start.o
+ .debug_abbrev  0x00003087       0x6d ./src/fw/vects.o
+ .debug_abbrev  0x000030f4       0xec ./src/fw/TMR/fw_tmr0.o
+ .debug_abbrev  0x000031e0       0xec ./src/fw/TMR/fw_tmr1.o
+ .debug_abbrev  0x000032cc      0x120 ./src/fw/TMR/fw_tmr2.o
+ .debug_abbrev  0x000033ec      0x125 ./src/fw/SWINT/fw_swint.o
+ .debug_abbrev  0x00003511       0xbf ./src/fw/SW/fw_sw.o
+ .debug_abbrev  0x000035d0      0x126 ./src/fw/SPI/fw_spi.o
+ .debug_abbrev  0x000036f6      0x18d ./src/fw/SCI/fw_sci2.o
+ .debug_abbrev  0x00003883       0xbf ./src/fw/LED/fw_led.o
+ .debug_abbrev  0x00003942       0xee ./src/fw/IRQ/fw_irq10.o
+ .debug_abbrev  0x00003a30       0xe3 ./src/fw/IRQ/fw_irq15.o
+ .debug_abbrev  0x00003b13      0x11d ./src/fw/IRQ/fw_irq8.o
+ .debug_abbrev  0x00003c30       0xee ./src/fw/IRQ/fw_irq9.o
+ .debug_abbrev  0x00003d1e       0x5f ./src/fw/GLCD/font_8x16.o
+ .debug_abbrev  0x00003d7d       0x5f ./src/fw/GLCD/font_8x8.o
+ .debug_abbrev  0x00003ddc       0x4e ./src/fw/GLCD/font_bitmap.o
+ .debug_abbrev  0x00003e2a       0x5f ./src/fw/GLCD/font_helvr10.o
+ .debug_abbrev  0x00003e89       0x5f ./src/fw/GLCD/font_winfreesystem14x16.o
+ .debug_abbrev  0x00003ee8       0x5f ./src/fw/GLCD/font_x5x7.o
+ .debug_abbrev  0x00003f47       0x5f ./src/fw/GLCD/font_x6x13.o
+ .debug_abbrev  0x00003fa6      0x16c ./src/fw/GLCD/fw_glcd.o
+ .debug_abbrev  0x00004112      0x136 ./src/fw/ETH/fw_eth.o
+ .debug_abbrev  0x00004248       0xea ./src/fw/Clock/fw_clock.o
+ .debug_abbrev  0x00004332      0x11c ./src/fw/CMT/cmt0.o
+ .debug_abbrev  0x0000444e      0x113 ./src/fw/AD/fw_ad.o
+
+.debug_loc      0x00000000     0x5f3a
+ .debug_loc     0x00000000      0x27f ./src/sw/webserver/EMAC.o
+ .debug_loc     0x0000027f      0x341 ./src/sw/webserver/httpd-cgi.o
+ .debug_loc     0x000005c0      0x34c ./src/sw/webserver/phy.o
+ .debug_loc     0x0000090c       0xe2 ./src/sw/task/BlockQ.o
+ .debug_loc     0x000009ee      0x15c ./src/sw/task/GenQTest.o
+ .debug_loc     0x00000b4a      0x28a ./src/sw/task/IntQueue.o
+ .debug_loc     0x00000dd4       0xec ./src/sw/task/PollQ.o
+ .debug_loc     0x00000ec0      0x168 ./src/sw/task/QPeek.o
+ .debug_loc     0x00001028       0xd4 ./src/sw/task/blocktim.o
+ .debug_loc     0x000010fc       0x7c ./src/sw/task/flash.o
+ .debug_loc     0x00001178      0x160 ./src/sw/task/flop.o
+ .debug_loc     0x000012d8       0xa8 ./src/sw/task/integer.o
+ .debug_loc     0x00001380      0x10c ./src/sw/task/recmutex.o
+ .debug_loc     0x0000148c       0xa8 ./src/sw/task/semtest.o
+ .debug_loc     0x00001534       0x90 ./src/sw/task/sw_task_glcd.o
+ .debug_loc     0x000015c4      0x15c ./src/sw/task/uIP_Task.o
+ .debug_loc     0x00001720      0x10c ./src/sw/MemMang/heap_2.o
+ .debug_loc     0x0000182c      0x294 ./src/sw/FreeTCPIP/psock.o
+ .debug_loc     0x00001ac0      0x118 ./src/sw/FreeTCPIP/timer.o
+ .debug_loc     0x00001bd8      0x3c4 ./src/sw/FreeTCPIP/uip.o
+ .debug_loc     0x00001f9c      0x100 ./src/sw/FreeTCPIP/uip_arp.o
+ .debug_loc     0x0000209c       0xe0 ./src/sw/FreeTCPIP/apps/httpd/httpd-fs.o
+ .debug_loc     0x0000217c      0x268 ./src/sw/FreeTCPIP/apps/httpd/httpd.o
+ .debug_loc     0x000023e4      0x194 ./src/sw/FreeRTOS/croutine.o
+ .debug_loc     0x00002578      0x124 ./src/sw/FreeRTOS/list.o
+ .debug_loc     0x0000269c      0x56a ./src/sw/FreeRTOS/queue.o
+ .debug_loc     0x00002c06      0xaa5 ./src/sw/FreeRTOS/tasks.o
+ .debug_loc     0x000036ab      0x342 ./src/sw/FreeRTOS/timers.o
+ .debug_loc     0x000039ed       0xbe ./src/sw/FreeRTOS/port/port.o
+ .debug_loc     0x00003aab       0x64 ./src/HighFrequencyTimerTest.o
+ .debug_loc     0x00003b0f       0x88 ./src/IntQueueTimer.o
+ .debug_loc     0x00003b97      0x1e0 ./src/mainl.o
+ .debug_loc     0x00003d77       0x38 ./src/fw/fw_setup.o
+ .debug_loc     0x00003daf       0x2c ./src/fw/hwinit.o
+ .debug_loc     0x00003ddb       0x38 ./src/fw/hwsetup.o
+ .debug_loc     0x00003e13     0x17b8 ./src/fw/inthandler.o
+ .debug_loc     0x000055cb       0xb0 ./src/fw/TMR/fw_tmr0.o
+ .debug_loc     0x0000567b       0xb0 ./src/fw/TMR/fw_tmr1.o
+ .debug_loc     0x0000572b       0xb2 ./src/fw/TMR/fw_tmr2.o
+ .debug_loc     0x000057dd       0x5a ./src/fw/SWINT/fw_swint.o
+ .debug_loc     0x00005837       0x2c ./src/fw/SW/fw_sw.o
+ .debug_loc     0x00005863       0x70 ./src/fw/SPI/fw_spi.o
+ .debug_loc     0x000058d3       0xe0 ./src/fw/SCI/fw_sci2.o
+ .debug_loc     0x000059b3       0x2c ./src/fw/LED/fw_led.o
+ .debug_loc     0x000059df       0x58 ./src/fw/IRQ/fw_irq10.o
+ .debug_loc     0x00005a37       0x58 ./src/fw/IRQ/fw_irq15.o
+ .debug_loc     0x00005a8f       0x58 ./src/fw/IRQ/fw_irq8.o
+ .debug_loc     0x00005ae7       0x58 ./src/fw/IRQ/fw_irq9.o
+ .debug_loc     0x00005b3f      0x280 ./src/fw/GLCD/fw_glcd.o
+ .debug_loc     0x00005dbf       0x90 ./src/fw/ETH/fw_eth.o
+ .debug_loc     0x00005e4f       0x2c ./src/fw/Clock/fw_clock.o
+ .debug_loc     0x00005e7b       0x58 ./src/fw/CMT/cmt0.o
+ .debug_loc     0x00005ed3       0x67 ./src/fw/AD/fw_ad.o
+
+.debug_aranges  0x00000000      0x798
+ .debug_aranges
+                0x00000000       0x20 ./src/sw/webserver/EMAC.o
+ .debug_aranges
+                0x00000020       0x20 ./src/sw/webserver/httpd-cgi.o
+ .debug_aranges
+                0x00000040       0x20 ./src/sw/webserver/phy.o
+ .debug_aranges
+                0x00000060       0x20 ./src/sw/task/BlockQ.o
+ .debug_aranges
+                0x00000080       0x20 ./src/sw/task/GenQTest.o
+ .debug_aranges
+                0x000000a0       0x20 ./src/sw/task/IntQueue.o
+ .debug_aranges
+                0x000000c0       0x20 ./src/sw/task/PollQ.o
+ .debug_aranges
+                0x000000e0       0x20 ./src/sw/task/QPeek.o
+ .debug_aranges
+                0x00000100       0x20 ./src/sw/task/blocktim.o
+ .debug_aranges
+                0x00000120       0x20 ./src/sw/task/flash.o
+ .debug_aranges
+                0x00000140       0x20 ./src/sw/task/flop.o
+ .debug_aranges
+                0x00000160       0x20 ./src/sw/task/integer.o
+ .debug_aranges
+                0x00000180       0x20 ./src/sw/task/recmutex.o
+ .debug_aranges
+                0x000001a0       0x20 ./src/sw/task/semtest.o
+ .debug_aranges
+                0x000001c0       0x20 ./src/sw/task/sw_task_glcd.o
+ .debug_aranges
+                0x000001e0       0x20 ./src/sw/task/uIP_Task.o
+ .debug_aranges
+                0x00000200       0x20 ./src/sw/MemMang/heap_2.o
+ .debug_aranges
+                0x00000220       0x20 ./src/sw/FreeTCPIP/psock.o
+ .debug_aranges
+                0x00000240       0x20 ./src/sw/FreeTCPIP/timer.o
+ .debug_aranges
+                0x00000260       0x20 ./src/sw/FreeTCPIP/uip.o
+ .debug_aranges
+                0x00000280       0x20 ./src/sw/FreeTCPIP/uip_arp.o
+ .debug_aranges
+                0x000002a0       0x18 ./src/sw/FreeTCPIP/apps/httpd/http-strings.o
+ .debug_aranges
+                0x000002b8       0x20 ./src/sw/FreeTCPIP/apps/httpd/httpd-fs.o
+ .debug_aranges
+                0x000002d8       0x20 ./src/sw/FreeTCPIP/apps/httpd/httpd.o
+ .debug_aranges
+                0x000002f8       0x20 ./src/sw/FreeRTOS/croutine.o
+ .debug_aranges
+                0x00000318       0x20 ./src/sw/FreeRTOS/list.o
+ .debug_aranges
+                0x00000338       0x20 ./src/sw/FreeRTOS/queue.o
+ .debug_aranges
+                0x00000358       0x20 ./src/sw/FreeRTOS/tasks.o
+ .debug_aranges
+                0x00000378       0x20 ./src/sw/FreeRTOS/timers.o
+ .debug_aranges
+                0x00000398       0x20 ./src/sw/FreeRTOS/port/port.o
+ .debug_aranges
+                0x000003b8       0x20 ./src/HighFrequencyTimerTest.o
+ .debug_aranges
+                0x000003d8       0x20 ./src/IntQueueTimer.o
+ .debug_aranges
+                0x000003f8       0x20 ./src/mainl.o
+ .debug_aranges
+                0x00000418       0x20 ./src/fw/fw_setup.o
+ .debug_aranges
+                0x00000438       0x20 ./src/fw/hwinit.o
+ .debug_aranges
+                0x00000458       0x20 ./src/fw/hwsetup.o
+ .debug_aranges
+                0x00000478       0x20 ./src/fw/inthandler.o
+ .debug_aranges
+                0x00000498       0x20 ./src/fw/start.o
+ .debug_aranges
+                0x000004b8       0x18 ./src/fw/vects.o
+ .debug_aranges
+                0x000004d0       0x20 ./src/fw/TMR/fw_tmr0.o
+ .debug_aranges
+                0x000004f0       0x20 ./src/fw/TMR/fw_tmr1.o
+ .debug_aranges
+                0x00000510       0x20 ./src/fw/TMR/fw_tmr2.o
+ .debug_aranges
+                0x00000530       0x20 ./src/fw/SWINT/fw_swint.o
+ .debug_aranges
+                0x00000550       0x20 ./src/fw/SW/fw_sw.o
+ .debug_aranges
+                0x00000570       0x20 ./src/fw/SPI/fw_spi.o
+ .debug_aranges
+                0x00000590       0x20 ./src/fw/SCI/fw_sci2.o
+ .debug_aranges
+                0x000005b0       0x20 ./src/fw/LED/fw_led.o
+ .debug_aranges
+                0x000005d0       0x20 ./src/fw/IRQ/fw_irq10.o
+ .debug_aranges
+                0x000005f0       0x20 ./src/fw/IRQ/fw_irq15.o
+ .debug_aranges
+                0x00000610       0x20 ./src/fw/IRQ/fw_irq8.o
+ .debug_aranges
+                0x00000630       0x20 ./src/fw/IRQ/fw_irq9.o
+ .debug_aranges
+                0x00000650       0x18 ./src/fw/GLCD/font_8x16.o
+ .debug_aranges
+                0x00000668       0x18 ./src/fw/GLCD/font_8x8.o
+ .debug_aranges
+                0x00000680       0x18 ./src/fw/GLCD/font_bitmap.o
+ .debug_aranges
+                0x00000698       0x18 ./src/fw/GLCD/font_helvr10.o
+ .debug_aranges
+                0x000006b0       0x18 ./src/fw/GLCD/font_winfreesystem14x16.o
+ .debug_aranges
+                0x000006c8       0x18 ./src/fw/GLCD/font_x5x7.o
+ .debug_aranges
+                0x000006e0       0x18 ./src/fw/GLCD/font_x6x13.o
+ .debug_aranges
+                0x000006f8       0x20 ./src/fw/GLCD/fw_glcd.o
+ .debug_aranges
+                0x00000718       0x20 ./src/fw/ETH/fw_eth.o
+ .debug_aranges
+                0x00000738       0x20 ./src/fw/Clock/fw_clock.o
+ .debug_aranges
+                0x00000758       0x20 ./src/fw/CMT/cmt0.o
+ .debug_aranges
+                0x00000778       0x20 ./src/fw/AD/fw_ad.o
+
+.debug_line     0x00000000     0x6cb9
+ .debug_line    0x00000000      0x478 ./src/sw/webserver/EMAC.o
+ .debug_line    0x00000478      0x3ee ./src/sw/webserver/httpd-cgi.o
+ .debug_line    0x00000866      0x34f ./src/sw/webserver/phy.o
+ .debug_line    0x00000bb5      0x1e0 ./src/sw/task/BlockQ.o
+ .debug_line    0x00000d95      0x26f ./src/sw/task/GenQTest.o
+ .debug_line    0x00001004      0x36b ./src/sw/task/IntQueue.o
+ .debug_line    0x0000136f      0x1d0 ./src/sw/task/PollQ.o
+ .debug_line    0x0000153f      0x1ef ./src/sw/task/QPeek.o
+ .debug_line    0x0000172e      0x25c ./src/sw/task/blocktim.o
+ .debug_line    0x0000198a      0x19a ./src/sw/task/flash.o
+ .debug_line    0x00001b24      0x17a ./src/sw/task/flop.o
+ .debug_line    0x00001c9e      0x11c ./src/sw/task/integer.o
+ .debug_line    0x00001dba      0x21b ./src/sw/task/recmutex.o
+ .debug_line    0x00001fd5      0x1ff ./src/sw/task/semtest.o
+ .debug_line    0x000021d4      0x205 ./src/sw/task/sw_task_glcd.o
+ .debug_line    0x000023d9      0x4be ./src/sw/task/uIP_Task.o
+ .debug_line    0x00002897      0x115 ./src/sw/MemMang/heap_2.o
+ .debug_line    0x000029ac      0x366 ./src/sw/FreeTCPIP/psock.o
+ .debug_line    0x00002d12      0x144 ./src/sw/FreeTCPIP/timer.o
+ .debug_line    0x00002e56      0x738 ./src/sw/FreeTCPIP/uip.o
+ .debug_line    0x0000358e      0x2bd ./src/sw/FreeTCPIP/uip_arp.o
+ .debug_line    0x0000384b       0x4e ./src/sw/FreeTCPIP/apps/httpd/http-strings.o
+ .debug_line    0x00003899      0x16d ./src/sw/FreeTCPIP/apps/httpd/httpd-fs.o
+ .debug_line    0x00003a06      0x462 ./src/sw/FreeTCPIP/apps/httpd/httpd.o
+ .debug_line    0x00003e68      0x267 ./src/sw/FreeRTOS/croutine.o
+ .debug_line    0x000040cf      0x1a9 ./src/sw/FreeRTOS/list.o
+ .debug_line    0x00004278      0x4dd ./src/sw/FreeRTOS/queue.o
+ .debug_line    0x00004755      0x78a ./src/sw/FreeRTOS/tasks.o
+ .debug_line    0x00004edf      0x2c8 ./src/sw/FreeRTOS/timers.o
+ .debug_line    0x000051a7      0x1a2 ./src/sw/FreeRTOS/port/port.o
+ .debug_line    0x00005349       0xf4 ./src/HighFrequencyTimerTest.o
+ .debug_line    0x0000543d       0xfb ./src/IntQueueTimer.o
+ .debug_line    0x00005538      0x303 ./src/mainl.o
+ .debug_line    0x0000583b       0x5b ./src/fw/fw_setup.o
+ .debug_line    0x00005896       0x45 ./src/fw/hwinit.o
+ .debug_line    0x000058db       0x5e ./src/fw/hwsetup.o
+ .debug_line    0x00005939      0x159 ./src/fw/inthandler.o
+ .debug_line    0x00005a92       0x56 ./src/fw/start.o
+ .debug_line    0x00005ae8       0x32 ./src/fw/vects.o
+ .debug_line    0x00005b1a       0x88 ./src/fw/TMR/fw_tmr0.o
+ .debug_line    0x00005ba2       0x85 ./src/fw/TMR/fw_tmr1.o
+ .debug_line    0x00005c27      0x149 ./src/fw/TMR/fw_tmr2.o
+ .debug_line    0x00005d70       0xd8 ./src/fw/SWINT/fw_swint.o
+ .debug_line    0x00005e48       0xcd ./src/fw/SW/fw_sw.o
+ .debug_line    0x00005f15      0x145 ./src/fw/SPI/fw_spi.o
+ .debug_line    0x0000605a      0x103 ./src/fw/SCI/fw_sci2.o
+ .debug_line    0x0000615d       0xfc ./src/fw/LED/fw_led.o
+ .debug_line    0x00006259       0xdc ./src/fw/IRQ/fw_irq10.o
+ .debug_line    0x00006335       0xdc ./src/fw/IRQ/fw_irq15.o
+ .debug_line    0x00006411      0x16b ./src/fw/IRQ/fw_irq8.o
+ .debug_line    0x0000657c       0xdb ./src/fw/IRQ/fw_irq9.o
+ .debug_line    0x00006657       0x3b ./src/fw/GLCD/font_8x16.o
+ .debug_line    0x00006692       0x3a ./src/fw/GLCD/font_8x8.o
+ .debug_line    0x000066cc       0x3d ./src/fw/GLCD/font_bitmap.o
+ .debug_line    0x00006709       0x3e ./src/fw/GLCD/font_helvr10.o
+ .debug_line    0x00006747       0x49 ./src/fw/GLCD/font_winfreesystem14x16.o
+ .debug_line    0x00006790       0x3b ./src/fw/GLCD/font_x5x7.o
+ .debug_line    0x000067cb       0x3c ./src/fw/GLCD/font_x6x13.o
+ .debug_line    0x00006807      0x10d ./src/fw/GLCD/fw_glcd.o
+ .debug_line    0x00006914       0xfe ./src/fw/ETH/fw_eth.o
+ .debug_line    0x00006a12       0x76 ./src/fw/Clock/fw_clock.o
+ .debug_line    0x00006a88      0x169 ./src/fw/CMT/cmt0.o
+ .debug_line    0x00006bf1       0xc8 ./src/fw/AD/fw_ad.o
+
+.debug_str      0x00000000     0xbddf
+ .debug_str     0x00000000     0x1df9 ./src/sw/webserver/EMAC.o
+                               0x1e5b (size before relaxing)
+ .debug_str     0x00001df9      0x352 ./src/sw/webserver/httpd-cgi.o
+                                0x4c7 (size before relaxing)
+ .debug_str     0x0000214b       0xf6 ./src/sw/webserver/phy.o
+                                0x33a (size before relaxing)
+ .debug_str     0x00002241      0x223 ./src/sw/task/BlockQ.o
+                                0x34d (size before relaxing)
+ .debug_str     0x00002464      0x177 ./src/sw/task/GenQTest.o
+                                0x2a7 (size before relaxing)
+ .debug_str     0x000025db      0x40a ./src/sw/task/IntQueue.o
+                                0x546 (size before relaxing)
+ .debug_str     0x000029e5       0xbc ./src/sw/task/PollQ.o
+                                0x211 (size before relaxing)
+ .debug_str     0x00002aa1       0xf2 ./src/sw/task/QPeek.o
+                                0x24b (size before relaxing)
+ .debug_str     0x00002b93      0x138 ./src/sw/task/blocktim.o
+                                0x26f (size before relaxing)
+ .debug_str     0x00002ccb       0x74 ./src/sw/task/flash.o
+                                0x195 (size before relaxing)
+ .debug_str     0x00002d3f      0x117 ./src/sw/task/flop.o
+                                0x237 (size before relaxing)
+ .debug_str     0x00002e56       0x8b ./src/sw/task/integer.o
+                                0x1bf (size before relaxing)
+ .debug_str     0x00002ee1      0x182 ./src/sw/task/recmutex.o
+                                0x2d4 (size before relaxing)
+ .debug_str     0x00003063      0x14e ./src/sw/task/semtest.o
+                                0x2b7 (size before relaxing)
+ .debug_str     0x000031b1       0x98 ./src/sw/task/sw_task_glcd.o
+                                0x1c6 (size before relaxing)
+ .debug_str     0x00003249      0x16d ./src/sw/task/uIP_Task.o
+                                0x42c (size before relaxing)
+ .debug_str     0x000033b6      0x176 ./src/sw/MemMang/heap_2.o
+                                0x26d (size before relaxing)
+ .debug_str     0x0000352c       0xe0 ./src/sw/FreeTCPIP/psock.o
+                                0x340 (size before relaxing)
+ .debug_str     0x0000360c       0x67 ./src/sw/FreeTCPIP/timer.o
+                                0x17d (size before relaxing)
+ .debug_str     0x00003673      0x2d1 ./src/sw/FreeTCPIP/uip.o
+                                0x645 (size before relaxing)
+ .debug_str     0x00003944       0xfd ./src/sw/FreeTCPIP/uip_arp.o
+                                0x2df (size before relaxing)
+ .debug_str     0x00003a41      0x205 ./src/sw/FreeTCPIP/apps/httpd/http-strings.o
+                                0x2a0 (size before relaxing)
+ .debug_str     0x00003c46      0x19c ./src/sw/FreeTCPIP/apps/httpd/httpd-fs.o
+                                0x2aa (size before relaxing)
+ .debug_str     0x00003de2       0xd5 ./src/sw/FreeTCPIP/apps/httpd/httpd.o
+                                0x46f (size before relaxing)
+ .debug_str     0x00003eb7      0x336 ./src/sw/FreeRTOS/croutine.o
+                                0x44c (size before relaxing)
+ .debug_str     0x000041ed       0xa3 ./src/sw/FreeRTOS/list.o
+                                0x23c (size before relaxing)
+ .debug_str     0x00004290      0x3a4 ./src/sw/FreeRTOS/queue.o
+                                0x5a8 (size before relaxing)
+ .debug_str     0x00004634      0x860 ./src/sw/FreeRTOS/tasks.o
+                                0xaf2 (size before relaxing)
+ .debug_str     0x00004e94      0x334 ./src/sw/FreeRTOS/timers.o
+                                0x54a (size before relaxing)
+ .debug_str     0x000051c8      0x9aa ./src/sw/FreeRTOS/port/port.o
+                               0x204d (size before relaxing)
+ .debug_str     0x00005b72       0xbd ./src/HighFrequencyTimerTest.o
+                               0x1a23 (size before relaxing)
+ .debug_str     0x00005c2f       0xb0 ./src/IntQueueTimer.o
+                               0x22c8 (size before relaxing)
+ .debug_str     0x00005cdf      0x167 ./src/mainl.o
+                               0x1bb1 (size before relaxing)
+ .debug_str     0x00005e46       0x15 ./src/fw/fw_setup.o
+                                 0xec (size before relaxing)
+ .debug_str     0x00005e5b       0x21 ./src/fw/hwinit.o
+                                 0xef (size before relaxing)
+ .debug_str     0x00005e7c       0x4a ./src/fw/hwsetup.o
+                                0x130 (size before relaxing)
+ .debug_str     0x00005ec6      0xaf0 ./src/fw/inthandler.o
+                                0xb7d (size before relaxing)
+ .debug_str     0x000069b6       0x35 ./src/fw/vects.o
+                                0x125 (size before relaxing)
+ .debug_str     0x000069eb       0x63 ./src/fw/TMR/fw_tmr0.o
+                                0x51a (size before relaxing)
+ .debug_str     0x00006a4e       0x63 ./src/fw/TMR/fw_tmr1.o
+                                0x515 (size before relaxing)
+ .debug_str     0x00006ab1       0x63 ./src/fw/TMR/fw_tmr2.o
+                                0x53c (size before relaxing)
+ .debug_str     0x00006b14       0x39 ./src/fw/SWINT/fw_swint.o
+                               0x1f94 (size before relaxing)
+ .debug_str     0x00006b4d       0x29 ./src/fw/SW/fw_sw.o
+                                0x101 (size before relaxing)
+ .debug_str     0x00006b76      0x494 ./src/fw/SPI/fw_spi.o
+                                0x864 (size before relaxing)
+ .debug_str     0x0000700a       0xaa ./src/fw/SCI/fw_sci2.o
+                               0x1a65 (size before relaxing)
+ .debug_str     0x000070b4       0x23 ./src/fw/LED/fw_led.o
+                                0x10d (size before relaxing)
+ .debug_str     0x000070d7       0x37 ./src/fw/IRQ/fw_irq10.o
+                                0x210 (size before relaxing)
+ .debug_str     0x0000710e       0x37 ./src/fw/IRQ/fw_irq15.o
+                                0x4c7 (size before relaxing)
+ .debug_str     0x00007145       0x34 ./src/fw/IRQ/fw_irq8.o
+                                0x238 (size before relaxing)
+ .debug_str     0x00007179       0x34 ./src/fw/IRQ/fw_irq9.o
+                                0x20d (size before relaxing)
+ .debug_str     0x000071ad     0x11bc ./src/fw/GLCD/font_8x16.o
+                               0x1260 (size before relaxing)
+ .debug_str     0x00008369     0x10ba ./src/fw/GLCD/font_8x8.o
+                               0x115e (size before relaxing)
+ .debug_str     0x00009423      0x1ba ./src/fw/GLCD/font_bitmap.o
+                                0x25e (size before relaxing)
+ .debug_str     0x000095dd      0x7b7 ./src/fw/GLCD/font_helvr10.o
+                                0x85b (size before relaxing)
+ .debug_str     0x00009d94      0xbe2 ./src/fw/GLCD/font_winfreesystem14x16.o
+                                0xc86 (size before relaxing)
+ .debug_str     0x0000a976      0x8aa ./src/fw/GLCD/font_x5x7.o
+                                0x94e (size before relaxing)
+ .debug_str     0x0000b220      0x92b ./src/fw/GLCD/font_x6x13.o
+                                0x9cf (size before relaxing)
+ .debug_str     0x0000bb4b       0xfd ./src/fw/GLCD/fw_glcd.o
+                                0x207 (size before relaxing)
+ .debug_str     0x0000bc48       0x75 ./src/fw/ETH/fw_eth.o
+                               0x11a4 (size before relaxing)
+ .debug_str     0x0000bcbd       0x29 ./src/fw/Clock/fw_clock.o
+                                0x3d4 (size before relaxing)
+ .debug_str     0x0000bce6       0x31 ./src/fw/CMT/cmt0.o
+                               0x229d (size before relaxing)
+ .debug_str     0x0000bd17       0xc8 ./src/fw/AD/fw_ad.o
+                                0x549 (size before relaxing)
+
+.comment        0x00000000       0x1c
+ .comment       0x00000000       0x1c ./src/sw/webserver/EMAC.o
+                                 0x1d (size before relaxing)
+ .comment       0x00000000       0x1d ./src/sw/webserver/httpd-cgi.o
+ .comment       0x00000000       0x1d ./src/sw/webserver/phy.o
+ .comment       0x00000000       0x1d ./src/sw/task/BlockQ.o
+ .comment       0x00000000       0x1d ./src/sw/task/GenQTest.o
+ .comment       0x00000000       0x1d ./src/sw/task/IntQueue.o
+ .comment       0x00000000       0x1d ./src/sw/task/PollQ.o
+ .comment       0x00000000       0x1d ./src/sw/task/QPeek.o
+ .comment       0x00000000       0x1d ./src/sw/task/blocktim.o
+ .comment       0x00000000       0x1d ./src/sw/task/flash.o
+ .comment       0x00000000       0x1d ./src/sw/task/flop.o
+ .comment       0x00000000       0x1d ./src/sw/task/integer.o
+ .comment       0x00000000       0x1d ./src/sw/task/recmutex.o
+ .comment       0x00000000       0x1d ./src/sw/task/semtest.o
+ .comment       0x00000000       0x1d ./src/sw/task/sw_task_glcd.o
+ .comment       0x00000000       0x1d ./src/sw/task/uIP_Task.o
+ .comment       0x00000000       0x1d ./src/sw/MemMang/heap_2.o
+ .comment       0x00000000       0x1d ./src/sw/FreeTCPIP/psock.o
+ .comment       0x00000000       0x1d ./src/sw/FreeTCPIP/timer.o
+ .comment       0x00000000       0x1d ./src/sw/FreeTCPIP/uip.o
+ .comment       0x00000000       0x1d ./src/sw/FreeTCPIP/uip_arp.o
+ .comment       0x00000000       0x1d ./src/sw/FreeTCPIP/apps/httpd/http-strings.o
+ .comment       0x00000000       0x1d ./src/sw/FreeTCPIP/apps/httpd/httpd-fs.o
+ .comment       0x00000000       0x1d ./src/sw/FreeTCPIP/apps/httpd/httpd.o
+ .comment       0x00000000       0x1d ./src/sw/FreeRTOS/croutine.o
+ .comment       0x00000000       0x1d ./src/sw/FreeRTOS/list.o
+ .comment       0x00000000       0x1d ./src/sw/FreeRTOS/queue.o
+ .comment       0x00000000       0x1d ./src/sw/FreeRTOS/tasks.o
+ .comment       0x00000000       0x1d ./src/sw/FreeRTOS/timers.o
+ .comment       0x00000000       0x1d ./src/sw/FreeRTOS/port/port.o
+ .comment       0x00000000       0x1d ./src/HighFrequencyTimerTest.o
+ .comment       0x00000000       0x1d ./src/IntQueueTimer.o
+ .comment       0x00000000       0x1d ./src/mainl.o
+ .comment       0x00000000       0x1d ./src/fw/fw_setup.o
+ .comment       0x00000000       0x1d ./src/fw/hwinit.o
+ .comment       0x00000000       0x1d ./src/fw/hwsetup.o
+ .comment       0x00000000       0x1d ./src/fw/inthandler.o
+ .comment       0x00000000       0x1d ./src/fw/vects.o
+ .comment       0x00000000       0x1d ./src/fw/TMR/fw_tmr0.o
+ .comment       0x00000000       0x1d ./src/fw/TMR/fw_tmr1.o
+ .comment       0x00000000       0x1d ./src/fw/TMR/fw_tmr2.o
+ .comment       0x00000000       0x1d ./src/fw/SWINT/fw_swint.o
+ .comment       0x00000000       0x1d ./src/fw/SW/fw_sw.o
+ .comment       0x00000000       0x1d ./src/fw/SPI/fw_spi.o
+ .comment       0x00000000       0x1d ./src/fw/SCI/fw_sci2.o
+ .comment       0x00000000       0x1d ./src/fw/LED/fw_led.o
+ .comment       0x00000000       0x1d ./src/fw/IRQ/fw_irq10.o
+ .comment       0x00000000       0x1d ./src/fw/IRQ/fw_irq15.o
+ .comment       0x00000000       0x1d ./src/fw/IRQ/fw_irq8.o
+ .comment       0x00000000       0x1d ./src/fw/IRQ/fw_irq9.o
+ .comment       0x00000000       0x1d ./src/fw/GLCD/font_8x16.o
+ .comment       0x00000000       0x1d ./src/fw/GLCD/font_8x8.o
+ .comment       0x00000000       0x1d ./src/fw/GLCD/font_bitmap.o
+ .comment       0x00000000       0x1d ./src/fw/GLCD/font_helvr10.o
+ .comment       0x00000000       0x1d ./src/fw/GLCD/font_winfreesystem14x16.o
+ .comment       0x00000000       0x1d ./src/fw/GLCD/font_x5x7.o
+ .comment       0x00000000       0x1d ./src/fw/GLCD/font_x6x13.o
+ .comment       0x00000000       0x1d ./src/fw/GLCD/fw_glcd.o
+ .comment       0x00000000       0x1d ./src/fw/ETH/fw_eth.o
+ .comment       0x00000000       0x1d ./src/fw/Clock/fw_clock.o
+ .comment       0x00000000       0x1d ./src/fw/CMT/cmt0.o
+ .comment       0x00000000       0x1d ./src/fw/AD/fw_ad.o
+ .comment       0x00000000       0x1d libRenesasRX62N.a(memcmp.o)
+ .comment       0x00000000       0x1d libRenesasRX62N.a(memcpy.o)
+ .comment       0x00000000       0x1d libRenesasRX62N.a(memset.o)
+ .comment       0x00000000       0x1d libRenesasRX62N.a(sprintf.o)
+ .comment       0x00000000       0x1d libRenesasRX62N.a(strchr.o)
+ .comment       0x00000000       0x1d libRenesasRX62N.a(strcpy.o)
+ .comment       0x00000000       0x1d libRenesasRX62N.a(strlen.o)
+ .comment       0x00000000       0x1d libRenesasRX62N.a(strncmp.o)
+ .comment       0x00000000       0x1d libRenesasRX62N.a(strncpy.o)
+ .comment       0x00000000       0x1d libRenesasRX62N.a(strrchr.o)
+ .comment       0x00000000       0x1d libRenesasRX62N.a(strstr.o)
+ .comment       0x00000000       0x1d libRenesasRX62N.a(frmwri.o)

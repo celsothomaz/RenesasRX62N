@@ -1,0 +1,6 @@
+#Fri May 03 09:16:47 BRT 2013
+com.renesas.cdt.rx.Debug.Linker.option.archiveSearchDirectories.1097756148="${CONFIGDIR}";"${TCINSTALL}\\..\\rx-elf\\lib\\gcc\\rx-elf\\4.5-GNURX_v10.03";"${TCINSTALL}\\lib\\gcc\\rx-elf\\\\${GCC_VERSION}";
+com.renesas.cdt.rx.Debug.Linker.option.archiveSearchDirectories.1543727635="${CONFIGDIR}";"${TCINSTALL}\\..\\rx-elf\\lib\\gcc\\rx-elf\\4.5-GNURX_v10.03";"${TCINSTALL}\\lib\\gcc\\rx-elf\\\\${GCC_VERSION}";
+com.renesas.cdt.rx.Debug.Linker.option.archiveSearchDirectories.1811751364="${CONFIGDIR}";"${TCINSTALL}\\..\\rx-elf\\lib\\gcc\\rx-elf\\4.5-GNURX_v10.03";"${TCINSTALL}\\lib\\gcc\\rx-elf\\\\${GCC_VERSION}";
+com.renesas.cdt.rx.Debug.Linker.option.archiveSearchDirectories.388480892="${CONFIGDIR}";"${TCINSTALL}\\..\\rx-elf\\lib\\gcc\\rx-elf\\4.5-GNURX_v10.03";"${TCINSTALL}\\rx-elf\\lib";"${TCINSTALL}\\lib\\gcc\\rx-elf\\\\${GCC_VERSION}";
+eclipse.preferences.version=1

@@ -1,0 +1,22 @@
+C:\Users\celso\AppData\Local\Temporary Projects\TerminaRX62N\bin\Debug\TerminaRX62N.exe
+C:\Users\celso\AppData\Local\Temporary Projects\TerminaRX62N\bin\Debug\TerminaRX62N.pdb
+C:\Users\celso\AppData\Local\Temporary Projects\TerminaRX62N\bin\Debug\TerminaRX62N.xml
+C:\Users\celso\AppData\Local\Temporary Projects\TerminaRX62N\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\celso\AppData\Local\Temporary Projects\TerminaRX62N\obj\x86\Debug\TerminaRX62N.Form1.resources
+C:\Users\celso\AppData\Local\Temporary Projects\TerminaRX62N\obj\x86\Debug\TerminaRX62N.Resources.resources
+C:\Users\celso\AppData\Local\Temporary Projects\TerminaRX62N\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\celso\AppData\Local\Temporary Projects\TerminaRX62N\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\celso\AppData\Local\Temporary Projects\TerminaRX62N\obj\x86\Debug\TerminaRX62N.exe
+C:\Users\celso\AppData\Local\Temporary Projects\TerminaRX62N\obj\x86\Debug\TerminaRX62N.xml
+C:\Users\celso\AppData\Local\Temporary Projects\TerminaRX62N\obj\x86\Debug\TerminaRX62N.pdb
+E:\Pessoal\Projetos_Pessoal\ProjetosRenesas\RenesasRX62N\util\SerialTerminal\TerminaRX62N\obj\x86\Debug\TerminaRX62N.xml
+E:\Pessoal\Projetos_Pessoal\ProjetosRenesas\RenesasRX62N\util\SerialTerminal\TerminaRX62N\obj\x86\Debug\TerminaRX62N.pdb
+E:\Pessoal\Projetos_Pessoal\ProjetosRenesas\RenesasRX62N\util\SerialTerminal\TerminaRX62N\bin\Debug\TerminaRX62N.exe
+E:\Pessoal\Projetos_Pessoal\ProjetosRenesas\RenesasRX62N\util\SerialTerminal\TerminaRX62N\bin\Debug\TerminaRX62N.pdb
+E:\Pessoal\Projetos_Pessoal\ProjetosRenesas\RenesasRX62N\util\SerialTerminal\TerminaRX62N\bin\Debug\TerminaRX62N.xml
+E:\Pessoal\Projetos_Pessoal\ProjetosRenesas\RenesasRX62N\util\SerialTerminal\TerminaRX62N\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\Pessoal\Projetos_Pessoal\ProjetosRenesas\RenesasRX62N\util\SerialTerminal\TerminaRX62N\obj\x86\Debug\TerminaRX62N.Form1.resources
+E:\Pessoal\Projetos_Pessoal\ProjetosRenesas\RenesasRX62N\util\SerialTerminal\TerminaRX62N\obj\x86\Debug\TerminaRX62N.Resources.resources
+E:\Pessoal\Projetos_Pessoal\ProjetosRenesas\RenesasRX62N\util\SerialTerminal\TerminaRX62N\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\Pessoal\Projetos_Pessoal\ProjetosRenesas\RenesasRX62N\util\SerialTerminal\TerminaRX62N\obj\x86\Debug\GenerateResource.write.1.tlog
+E:\Pessoal\Projetos_Pessoal\ProjetosRenesas\RenesasRX62N\util\SerialTerminal\TerminaRX62N\obj\x86\Debug\TerminaRX62N.exe

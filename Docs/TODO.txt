@@ -1,0 +1,7 @@
+Port do FREERTOS
+arquivos OK
+interrupção de software ok
+configuração e interrupção do CMT0 ok
+
+arquivo cc.h
+Configurar o printf para diagnostico

@@ -18,7 +18,7 @@ void fw_glcd_init(void){
 	fw_glcd_send_command(FW_GLCD_FUNCTION_SET | FW_GLCD_FUNCTION_SET_H01);
 	fw_glcd_send_command(FW_GLCD_BIAS_SYSTEM | 6); //values 0 to 7
 	fw_glcd_send_command(FW_GLCD_FUNCTION_SET | FW_GLCD_FUNCTION_SET_H11);
-	fw_glcd_send_command(FW_GLCD_BOOSTER | FW_GLCD_BOOSTER_EFFICIENCY_2 | FW_GLCD_BOOSTER_STAGE_3);
+	fw_glcd_send_command(FW_GLCD_BOOSTER | FW_GLCD_BOOSTER_EFFICIENCY_2 | FW_GLCD_BOOSTER_STAGE_5);
 	fw_glcd_send_command(FW_GLCD_FUNCTION_SET | FW_GLCD_FUNCTION_SET_H00);
 	fw_glcd_send_command(FW_GLCD_VLCD_RANGE_LOW);
 	fw_glcd_send_command(FW_GLCD_FUNCTION_SET | FW_GLCD_FUNCTION_SET_H01);

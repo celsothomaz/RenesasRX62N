@@ -6,17 +6,20 @@
 C_SRCS += \
 ..\src/fw/TMR/fw_tmr0.c \
 ..\src/fw/TMR/fw_tmr1.c \
-..\src/fw/TMR/fw_tmr2.c 
+..\src/fw/TMR/fw_tmr2.c \
+..\src/fw/TMR/fw_tmr3.c 
 
 OBJS += \
 ./src/fw/TMR/fw_tmr0.o \
 ./src/fw/TMR/fw_tmr1.o \
-./src/fw/TMR/fw_tmr2.o 
+./src/fw/TMR/fw_tmr2.o \
+./src/fw/TMR/fw_tmr3.o 
 
 C_DEPS += \
 ./src/fw/TMR/fw_tmr0.d \
 ./src/fw/TMR/fw_tmr1.d \
-./src/fw/TMR/fw_tmr2.d 
+./src/fw/TMR/fw_tmr2.d \
+./src/fw/TMR/fw_tmr3.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

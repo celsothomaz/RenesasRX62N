@@ -305,7 +305,7 @@ const fp RelocatableVectors[] RVECT_SECT  = {
 //;0x0194  AD3_ADI3
     (fp)INT_Excep_AD3_ADI3,
 //;0x0198  Reserved
-    (fp)0,
+    (fp)fw_ad_handle,
 //;0x019C  Reserved
     (fp)0,
 //;0x01A0  TPU0_TGI0A
@@ -449,29 +449,29 @@ const fp RelocatableVectors[] RVECT_SECT  = {
 //;0x02B4  Reserved
     (fp)0,
 //;0x02B8  TMR0_CMI0A
-    (fp)vT0_1_ISR_Handler,
+    (fp)fw_tmr0_handle_CMI0A,
 //;0x02BC  TMR0_CMI0B
-    (fp)INT_Excep_TMR0_CMI0B,
+    (fp)fw_tmr0_handle_CMI0B,
 //;0x02C0  TMR0_OV0I
-    (fp)INT_Excep_TMR0_OV0I,
+    (fp)fw_tmr0_handle_OV0I,
 //;0x02C4  TMR1_CMI1A
-    (fp)INT_Excep_TMR1_CMI1A,
+    (fp)fw_tmr1_handle_CMI1A,
 //;0x02C8  TMR1_CMI1B
-    (fp)INT_Excep_TMR1_CMI1B,
+    (fp)fw_tmr1_handle_CMI1B,
 //;0x02CC  TMR1_OV1I
-    (fp)INT_Excep_TMR1_OV1I,
+    (fp)fw_tmr1_handle_OV1I,
 //;0x02D0 TMR2_CMI2A
-    (fp)vT2_3_ISR_Handler,
+    (fp)fw_tmr2_handle_CMI2A,
 //;0x02D4  TMR2_CMI2B
-    (fp)INT_Excep_TMR2_CMI2B,
+    (fp)fw_tmr2_handle_CMI2B,
 //;0x02D8  TMR2_OV2I
-    (fp)INT_Excep_TMR2_OV2I,
+    (fp)fw_tmr2_handle_OV2I,
 //;0x02DC  TMR3_CMI3A
-    (fp)INT_Excep_TMR3_CMI3A,
+    (fp)fw_tmr3_handle_CMI3A,
 //;0x02E0 TMR3_CMI3B
-    (fp)INT_Excep_TMR3_CMI3B,
+    (fp)fw_tmr3_handle_CMI3B,
 //;0x02E4  TMR3_OV3I
-    (fp)INT_Excep_TMR3_OV3I,
+    (fp)fw_tmr3_handle_OV3I,
 //;0x02E8  Reserved
     (fp)0,
 //;0x02EC  Reserved

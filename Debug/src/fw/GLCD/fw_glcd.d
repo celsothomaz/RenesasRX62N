@@ -6,7 +6,7 @@ src/fw/GLCD/fw_glcd.d: ../src/fw/GLCD/fw_glcd.c \
  ../src/fw/GLCD/../TMR/fw_tmr.h ../src/fw/GLCD/../CMT/cmt0.h \
  ../src/fw/GLCD/../SWINT/fw_swint.h ../src/fw/GLCD/../ETH/fw_eth.h \
  ../src/fw/GLCD/../IRQ/fw_irq.h ../src/fw/GLCD/../LED/fw_led.h \
- ../src/fw/GLCD/../SW/fw_sw.h
+ ../src/fw/GLCD/../SW/fw_sw.h ../src/fw/GLCD/../RTC/fw_rtc.h
 
 ../src/fw/GLCD/../fw_config.h:
 
@@ -37,3 +37,5 @@ src/fw/GLCD/fw_glcd.d: ../src/fw/GLCD/fw_glcd.c \
 ../src/fw/GLCD/../LED/fw_led.h:
 
 ../src/fw/GLCD/../SW/fw_sw.h:
+
+../src/fw/GLCD/../RTC/fw_rtc.h:

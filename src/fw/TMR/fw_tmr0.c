@@ -5,7 +5,7 @@
  *      Author: celso
  */
 
-#include "../fw_config.h"
+#include "sw_config.h"
 
 void fw_tmr0_init(void){
 	MSTP_TMR0 = 0;
@@ -43,14 +43,14 @@ void fw_tmr0_init(void){
 
 }
 
-void  fw_tmr0_handle_CMIA0(void){
+void  fw_tmr0_handle_CMI0A(void){
 	ICU.IR[174].BIT.IR = 0; //Reset interrupt indication
 }
 
-void  fw_tmr0_handle_CMIB0(void){
+void  fw_tmr0_handle_CMI0B(void){
 	ICU.IR[175].BIT.IR = 0; //Reset interrupt indication
 }
 
-void  fw_tmr0_handle_OVI0(void){
+void  fw_tmr0_handle_OV0I(void){
 	ICU.IR[176].BIT.IR = 0; //Reset interrupt indication
 }

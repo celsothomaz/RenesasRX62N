@@ -5,17 +5,14 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
 ..\src/HighFrequencyTimerTest.c \
-..\src/IntQueueTimer.c \
 ..\src/mainl.c 
 
 OBJS += \
 ./src/HighFrequencyTimerTest.o \
-./src/IntQueueTimer.o \
 ./src/mainl.o 
 
 C_DEPS += \
 ./src/HighFrequencyTimerTest.d \
-./src/IntQueueTimer.d \
 ./src/mainl.d 
 
 

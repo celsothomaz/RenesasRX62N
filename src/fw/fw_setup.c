@@ -23,11 +23,11 @@ void fw_setup (void){
 	DBG("GLCD Initialization");
 	fw_glcd_init();
 
-	//DBG("AD Initialization");
-	//fw_ad_init();
+	DBG("AD Initialization");
+	fw_ad_init();
 
-	//DBG("TMR0 Initialization");
-	//fw_tmr0_init();
+	DBG("TMR0 Initialization");
+	fw_tmr0_init();
 
 	//DBG("TMR1 Initialization");
 	//fw_tmr1_init();
@@ -52,6 +52,9 @@ void fw_setup (void){
 
 	DBG("SW Initialization");
 	fw_sw_init();
+
+	DBG("RTC Initialization");
+	fw_rtc_init();
 
 	//__asm volatile( "SETPSW I" );
 }

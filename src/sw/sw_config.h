@@ -12,6 +12,9 @@ struct stData {
 	struct stGLCD{
 		char screenNumber;
 	}auxGLCD;
+	struct stAD{
+		int AN4_value;
+	}auxAN;
 };
 
 extern struct stData auxData;

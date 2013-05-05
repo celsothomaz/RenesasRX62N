@@ -6,7 +6,6 @@
 C_SRCS += \
 ..\src/sw/task/BlockQ.c \
 ..\src/sw/task/GenQTest.c \
-..\src/sw/task/IntQueue.c \
 ..\src/sw/task/PollQ.c \
 ..\src/sw/task/QPeek.c \
 ..\src/sw/task/blocktim.c \
@@ -21,7 +20,6 @@ C_SRCS += \
 OBJS += \
 ./src/sw/task/BlockQ.o \
 ./src/sw/task/GenQTest.o \
-./src/sw/task/IntQueue.o \
 ./src/sw/task/PollQ.o \
 ./src/sw/task/QPeek.o \
 ./src/sw/task/blocktim.o \
@@ -36,7 +34,6 @@ OBJS += \
 C_DEPS += \
 ./src/sw/task/BlockQ.d \
 ./src/sw/task/GenQTest.d \
-./src/sw/task/IntQueue.d \
 ./src/sw/task/PollQ.d \
 ./src/sw/task/QPeek.d \
 ./src/sw/task/blocktim.d \

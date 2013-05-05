@@ -464,54 +464,6 @@ void INT_Excep_TPU11_TCI11U(void) __attribute__ ((interrupt));
 // vector 172 reserved
 // vector 173 reserved
 
-// TMR0_CMI0A
-
-void INT_Excep_TMR0_CMI0A(void) __attribute__ ((interrupt));
-
-// TMR0_CMI0B
-
-void INT_Excep_TMR0_CMI0B(void) __attribute__ ((interrupt));
-
-// TMR0_OV0I
-
-void INT_Excep_TMR0_OV0I(void) __attribute__ ((interrupt));
-
-// TMR1_CMI1A
-
-void INT_Excep_TMR1_CMI1A(void) __attribute__ ((interrupt));
-
-// TMR1_CMI1B
-
-void INT_Excep_TMR1_CMI1B(void) __attribute__ ((interrupt));
-
-// TMR1_OV1I
-
-void INT_Excep_TMR1_OV1I(void) __attribute__ ((interrupt));
-
-// TMR2_CMI2A
-
-void INT_Excep_TMR2_CMI2A(void) __attribute__ ((interrupt));
-
-// TMR2_CMI2B
-
-void INT_Excep_TMR2_CMI2B(void) __attribute__ ((interrupt));
-
-// TMR2_OV2I
-
-void INT_Excep_TMR2_OV2I(void) __attribute__ ((interrupt));
-
-// TMR3_CMI3A
-
-void INT_Excep_TMR3_CMI3A(void) __attribute__ ((interrupt));
-
-// TMR3_CMI3B
-
-void INT_Excep_TMR3_CMI3B(void) __attribute__ ((interrupt));
-
-// TMR3_OV3I
-
-void INT_Excep_TMR3_OV3I(void) __attribute__ ((interrupt));
-
 // vector 186 reserved
 // vector 187 reserved
 // vector 188 reserved

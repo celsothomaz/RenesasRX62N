@@ -22,6 +22,7 @@ RM := rm -rf *.lst *.lis *.lpp *.map
 -include src/fw/SW/subdir.mk
 -include src/fw/SPI/subdir.mk
 -include src/fw/SCI/subdir.mk
+-include src/fw/RTC/subdir.mk
 -include src/fw/LED/subdir.mk
 -include src/fw/IRQ/subdir.mk
 -include src/fw/GLCD/subdir.mk

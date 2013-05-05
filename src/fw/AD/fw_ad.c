@@ -5,7 +5,7 @@
  *      Author: celso
  */
 
-#include "../fw_config.h"
+#include "sw_config.h"
 
 void fw_ad_init(void){
 	MSTP_AD0 = 1;
@@ -42,28 +42,7 @@ void fw_ad_init(void){
 
 void  fw_ad_handle(void){
 
-	unsigned short ADC_out, aux_adc_out;
-
-	ADC_out = S12AD.ADDR4 & 0XFFFF;
-	fw_glcd_line(2);
-	fw_glcd_colun(0);
-	fw_glcd_input(':');
-
-	aux_adc_out = (unsigned char)((ADC_out & 0xF000) >> 12);
-	if ((aux_adc_out >= 0) && (aux_adc_out <= 9)) fw_glcd_input(aux_adc_out + '0');
-	if ((aux_adc_out >= 10) && (aux_adc_out <= 15)) fw_glcd_input(aux_adc_out - 10 + 'A');
-
-	aux_adc_out = (unsigned char)((ADC_out & 0x0F00) >> 8);
-	if ((aux_adc_out >= 0) && (aux_adc_out <= 9)) fw_glcd_input(aux_adc_out + '0');
-	if ((aux_adc_out >= 10) && (aux_adc_out <= 15)) fw_glcd_input(aux_adc_out - 10 + 'A');
-
-	aux_adc_out = (unsigned char)((ADC_out & 0x00F0) >> 4);
-	if ((aux_adc_out >= 0) && (aux_adc_out <= 9)) fw_glcd_input(aux_adc_out + '0');
-	if ((aux_adc_out >= 10) && (aux_adc_out <= 15)) fw_glcd_input(aux_adc_out - 10 + 'A');
-
-	aux_adc_out = (unsigned char)(ADC_out & 0x000F);
-	if ((aux_adc_out >= 0) && (aux_adc_out <= 9)) fw_glcd_input(aux_adc_out + '0');
-	if ((aux_adc_out >= 10) && (aux_adc_out <= 15)) fw_glcd_input(aux_adc_out - 10 + 'A');
+	auxData.auxAN.AN4_value = (int) (S12AD.ADDR4 & 0XFFFF);
 
 	ICU.IR[102].BIT.IR = 0; //Reset interrupt indication
 

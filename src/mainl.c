@@ -285,7 +285,6 @@ extern void HardwareSetup(void);
 	vStartLEDFlashTasks( mainFLASH_TASK_PRIORITY );
 	vStartQueuePeekTasks();
 	vStartRecursiveMutexTasks();
-	vStartInterruptQueueTasks();
 	vStartMathTasks( mainFLOP_TASK_PRIORITY );
 
 	/* Start the tasks running. */
@@ -355,10 +354,6 @@ extern void vSetupHighFrequencyTimer( void );
 	    {
 			pcStatusMessage = "Error: RecMutex\r\n";
 	    }
-		else if( xAreIntQueueTasksStillRunning() != pdPASS )
-		{
-			pcStatusMessage = "Error: IntQueue\r\n";
-		}
 		else if( xAreMathsTaskStillRunning() != pdPASS )
 		{
 			pcStatusMessage = "Error: Flop\r\n";

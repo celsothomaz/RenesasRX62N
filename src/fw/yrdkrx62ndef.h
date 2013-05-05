@@ -35,20 +35,6 @@ Macro definitions
 #define 	SET_BYTE_HIGH	(0xFF)
 #define 	SET_BYTE_LOW	(0x00)
 
-/* Define switches to be polled if not available as interrupts */
-#define		SW_ACTIVE		FALSE
-#define     SW1             PORT4.PORT.BIT.B0
-#define     SW2             PORT4.PORT.BIT.B1
-#define     SW3             PORT4.PORT.BIT.B2
-#define     SW1_DDR         PORT4.DDR.BIT.B0
-#define     SW2_DDR         PORT4.DDR.BIT.B1
-#define     SW3_DDR         PORT4.DDR.BIT.B2
-#define     SW1_ICR         PORT4.ICR.BIT.B0
-#define     SW2_ICR         PORT4.ICR.BIT.B1
-#define     SW3_ICR         PORT4.ICR.BIT.B2
-
-
-
 /******************************************************************************
 Variable Externs
 ******************************************************************************/
@@ -56,8 +42,6 @@ Variable Externs
 /******************************************************************************
 Functions Prototypes
 ******************************************************************************/
-
-
 
 /* RDKRX62N_H */
 #endif		

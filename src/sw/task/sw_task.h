@@ -10,7 +10,6 @@
 
 /* Standard demo includes. */
 #include "flash.h"
-#include "IntQueue.h"
 #include "BlockQ.h"
 #include "integer.h"
 #include "blocktim.h"

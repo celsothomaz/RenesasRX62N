@@ -272,41 +272,7 @@ void INT_Excep_TPU11_TCI11V(void){ }
 // TPU11_TCI11U
 void INT_Excep_TPU11_TCI11U(void){ }
 
-// TMR0_CMI0A
-void INT_Excep_TMR0_CMI0A(void){ }
 
-// TMR0_CMI0B
-void INT_Excep_TMR0_CMI0B(void){ }
-
-// TMR0_OV0I
-void INT_Excep_TMR0_OV0I(void){ }
-
-// TMR1_CMI1A
-void INT_Excep_TMR1_CMI1A(void){ }
-
-// TMR1_CMI1B
-void INT_Excep_TMR1_CMI1B(void){ }
-
-// TMR1_OV1I
-void INT_Excep_TMR1_OV1I(void){ }
-
-// TMR2_CMI2A
-void INT_Excep_TMR2_CMI2A(void){ }
-
-// TMR2_CMI2B
-void INT_Excep_TMR2_CMI2B(void){ }
-
-// TMR2_OV2I
-void INT_Excep_TMR2_OV2I(void){ }
-
-// TMR3_CMI3A
-void INT_Excep_TMR3_CMI3A(void){ }
-
-// TMR3_CMI3B
-void INT_Excep_TMR3_CMI3B(void){ }
-
-// TMR3_OV3I
-void INT_Excep_TMR3_OV3I(void){ }
 
 // DMAC_DMTEND0
 void INT_Excep_DMAC_DMTEND0(void){ }

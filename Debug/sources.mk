@@ -59,6 +59,7 @@ src/fw/SWINT \
 src/fw/SW \
 src/fw/SPI \
 src/fw/SCI \
+src/fw/RTC \
 src/fw/LED \
 src/fw/IRQ \
 src/fw/GLCD \

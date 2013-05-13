@@ -99,7 +99,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="src/sw/webserver/httpd-fsdata.c|src/sw/FreeTCPIP/apps/httpd/httpd-cgi.c|src/sw/MemMang/heap_4.c|src/sw/MemMang/heap_3.c|src/sw/MemMang/heap_1.c|webserver/httpd-fsdata.c|main-blinky.c|2/FreeRTOS/Demo/RX600_RX62N-RDK_GNURX/RTOSDemo/webserver/httpd-fsdata.c" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name=""/>
+						<entry excluding="Docs|src/sw/webserver/httpd-fsdata.c|src/sw/FreeTCPIP/apps/httpd/httpd-cgi.c|src/sw/MemMang/heap_4.c|src/sw/MemMang/heap_3.c|src/sw/MemMang/heap_1.c|webserver/httpd-fsdata.c|main-blinky.c|2/FreeRTOS/Demo/RX600_RX62N-RDK_GNURX/RTOSDemo/webserver/httpd-fsdata.c" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name=""/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -352,7 +352,7 @@
 					<folderInfo id="com.renesas.cdt.rx.base.release.configuration.Id.1460216560." name="/" resourcePath="">
 						<toolChain id="com.renesas.cdt.rx.release.win32.toolchain.Id.1665738948" name="KPIT GNURX-ELF Toolchain" superClass="com.renesas.cdt.rx.release.win32.toolchain.Id">
 							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF;org.eclipse.cdt.core.PE" id="com.renesas.cdt.rx.release.win32.targetplatform.Id.727644163" osList="win32" superClass="com.renesas.cdt.rx.release.win32.targetplatform.Id"/>
-							<builder buildPath="${workspace_loc:/RenesasRX62N/Release}" id="com.renesas.cdt.rx.release.win32.builder.Id.841726083" name="GNU Make Builder.Release" superClass="com.renesas.cdt.rx.release.win32.builder.Id"/>
+							<builder buildPath="${workspace_loc:/RenesasRX62N/Release}" id="com.renesas.cdt.rx.release.win32.builder.Id.841726083" keepEnvironmentInBuildfile="false" name="GNU Make Builder" superClass="com.renesas.cdt.rx.release.win32.builder.Id"/>
 							<tool id="com.renesas.cdt.rx.release.win32.tool.libgen.Id.462733195" name="Library Generator" superClass="com.renesas.cdt.rx.release.win32.tool.libgen.Id"/>
 							<tool id="com.renesas.cdt.rx.release.win32.tool.compiler.Id.1344390523" name="Compiler" superClass="com.renesas.cdt.rx.release.win32.tool.compiler.Id">
 								<inputType id="%Base.Compiler.C.InputType.Id.1602257833" name="C Input" superClass="%Base.Compiler.C.InputType.Id"/>
@@ -364,6 +364,9 @@
 							<tool id="com.renesas.cdt.rx.release.win32.tool.objcopy.Id.1981910084" name="Objcopy" superClass="com.renesas.cdt.rx.release.win32.tool.objcopy.Id"/>
 						</toolChain>
 					</folderInfo>
+					<sourceEntries>
+						<entry excluding="Docs" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+					</sourceEntries>
 				</configuration>
 			</storageModule>
 			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>

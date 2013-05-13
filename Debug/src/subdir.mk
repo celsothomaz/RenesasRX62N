@@ -5,15 +5,15 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
 ..\src/HighFrequencyTimerTest.c \
-..\src/mainl.c 
+..\src/main.c 
 
 OBJS += \
 ./src/HighFrequencyTimerTest.o \
-./src/mainl.o 
+./src/main.o 
 
 C_DEPS += \
 ./src/HighFrequencyTimerTest.d \
-./src/mainl.d 
+./src/main.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

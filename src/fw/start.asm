@@ -22,7 +22,7 @@ ___dso_handle:
 	.global ___dso_handle
 #endif	
 
-	.extern _hw_initialise  /*external Sub-routine to initialise Hardware*/
+	.extern _fw_setup
 	.extern _data
 	.extern _mdata
 	.extern _ebss
@@ -67,7 +67,7 @@ _start:
 	sstr.b
 
 /* call the hardware initialiser */
-	bsr.a	_hw_initialise	
+	bsr.a	_fw_setup //_hw_initialise
 	nop
 
 /* setup PSW */

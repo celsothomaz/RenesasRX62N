@@ -12,9 +12,21 @@ struct stData {
 	struct stGLCD{
 		char screenNumber;
 	}auxGLCD;
-	struct stAD{
+	struct stAN{
 		int AN4_value;
 	}auxAN;
+	union stTEMP{
+		int value;
+		struct{
+			unsigned char B0;
+			unsigned char B1;
+		}BYTE;
+	}auxTemp;
+	struct stACELEROMETER{
+		int x;
+		int y;
+		int z;
+	}auxAcelerometer;
 };
 
 extern struct stData auxData;

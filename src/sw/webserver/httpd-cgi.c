@@ -211,7 +211,7 @@ static unsigned short generate_io_state( void *arg )
 	( void ) arg;
 
 	/* Are the dynamically setable LEDs currently on or off? */
-	if( LED12 == 0 )
+	if( LED13 == 0 )
 	{
 		pcStatus = "checked";
 	}

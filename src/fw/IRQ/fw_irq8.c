@@ -29,6 +29,6 @@ void fw_irq8_init(void){
 void fw_irq8_handle(void){
 	LED10 = 1 - LED10;
 	auxData.auxGLCD.screenNumber++;
-	if (auxData.auxGLCD.screenNumber > 1) auxData.auxGLCD.screenNumber = 0;
+	if (auxData.auxGLCD.screenNumber > 2) auxData.auxGLCD.screenNumber = 0;
 	ICU.IR[72].BIT.IR = 0;
 }

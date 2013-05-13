@@ -56,5 +56,8 @@ void fw_setup (void){
 	DBG("RTC Initialization");
 	fw_rtc_init();
 
+	DBG("IIC Initialization");
+	fw_iic_init();
+
 	//__asm volatile( "SETPSW I" );
 }

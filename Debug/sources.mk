@@ -47,6 +47,8 @@ CXX_UPPER_DEPS :=
 SUBDIRS := \
 src/sw/webserver \
 src/sw/task \
+src/sw/task/IIC \
+src/sw/task/GLCD \
 src/sw/MemMang \
 src/sw/FreeTCPIP \
 src/sw/FreeTCPIP/apps/httpd \
@@ -62,6 +64,7 @@ src/fw/SCI \
 src/fw/RTC \
 src/fw/LED \
 src/fw/IRQ \
+src/fw/IIC \
 src/fw/GLCD \
 src/fw/ETH \
 src/fw/Clock \

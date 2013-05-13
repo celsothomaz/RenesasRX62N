@@ -260,7 +260,7 @@ extern void HardwareSetup(void);
 
 	/* Renesas provided CPU configuration routine.  The clocks are configured in
 	here. */
-	fw_setup();
+	//fw_setup();
 	HardwareSetup();
 
 	/* Start the reg test tasks which test the context switching mechanism. */
@@ -274,18 +274,16 @@ extern void HardwareSetup(void);
 	xTaskCreate( prvCheckTask, ( signed char * ) "Check", configMINIMAL_STACK_SIZE, NULL, mainCHECK_TASK_PRIORITY, NULL );
 
 	xTaskCreate( sw_task_glcd, "GLCD", configMINIMAL_STACK_SIZE, NULL, mainFLASH_TASK_PRIORITY, NULL );
+	xTaskCreate( sw_task_iic, "IIC", configMINIMAL_STACK_SIZE, NULL, mainFLASH_TASK_PRIORITY, NULL );
 
 	/* Create the standard demo tasks. */
 	vStartBlockingQueueTasks( mainBLOCK_Q_PRIORITY );
 	vCreateBlockTimeTasks();
-	vStartSemaphoreTasks( mainSEM_TEST_PRIORITY );
-	vStartPolledQueueTasks( mainQUEUE_POLL_PRIORITY );
 	vStartIntegerMathTasks( mainINTEGER_TASK_PRIORITY );
 	vStartGenericQueueTasks( mainGEN_QUEUE_TASK_PRIORITY );
 	vStartLEDFlashTasks( mainFLASH_TASK_PRIORITY );
 	vStartQueuePeekTasks();
 	vStartRecursiveMutexTasks();
-	vStartMathTasks( mainFLOP_TASK_PRIORITY );
 
 	/* Start the tasks running. */
 	vTaskStartScheduler();
@@ -338,14 +336,6 @@ extern void vSetupHighFrequencyTimer( void );
 		{
 			pcStatusMessage = "Error: BlockTime\r\n";
 		}
-	    else if( xAreSemaphoreTasksStillRunning() != pdTRUE )
-	    {
-			pcStatusMessage = "Error: SemTest\r\n";
-	    }
-	    else if( xArePollingQueuesStillRunning() != pdTRUE )
-	    {
-			pcStatusMessage = "Error: PollQueue\r\n";
-	    }
 	    else if( xAreIntegerMathsTaskStillRunning() != pdTRUE )
 	    {
 			pcStatusMessage = "Error: IntMath\r\n";
@@ -354,10 +344,6 @@ extern void vSetupHighFrequencyTimer( void );
 	    {
 			pcStatusMessage = "Error: RecMutex\r\n";
 	    }
-		else if( xAreMathsTaskStillRunning() != pdPASS )
-		{
-			pcStatusMessage = "Error: Flop\r\n";
-		}
 
 		/* Check the reg test tasks are still cycling.  They will stop incrementing
 		their loop counters if they encounter an error. */

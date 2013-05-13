@@ -13,14 +13,13 @@
 #include "BlockQ.h"
 #include "integer.h"
 #include "blocktim.h"
-#include "semtest.h"
-#include "PollQ.h"
 #include "GenQTest.h"
 #include "QPeek.h"
 #include "recmutex.h"
-#include "flop.h"
+
+#include "GLCD/sw_task_glcd.h"
+#include "IIC/sw_task_iic.h"
 
 
-void sw_task_glcd (void *pvParameters);
 
 #endif /* SW_TASK_H_ */

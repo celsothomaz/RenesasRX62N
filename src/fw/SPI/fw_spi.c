@@ -5,7 +5,7 @@
  *      Author: celso
  */
 
-#include "fw_config.h"
+#include "sw_config.h"
 
 void fw_spi_init(void){
 	long i = 0;

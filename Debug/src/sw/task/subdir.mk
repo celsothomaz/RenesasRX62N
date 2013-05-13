@@ -6,43 +6,31 @@
 C_SRCS += \
 ..\src/sw/task/BlockQ.c \
 ..\src/sw/task/GenQTest.c \
-..\src/sw/task/PollQ.c \
 ..\src/sw/task/QPeek.c \
 ..\src/sw/task/blocktim.c \
 ..\src/sw/task/flash.c \
-..\src/sw/task/flop.c \
 ..\src/sw/task/integer.c \
 ..\src/sw/task/recmutex.c \
-..\src/sw/task/semtest.c \
-..\src/sw/task/sw_task_glcd.c \
 ..\src/sw/task/uIP_Task.c 
 
 OBJS += \
 ./src/sw/task/BlockQ.o \
 ./src/sw/task/GenQTest.o \
-./src/sw/task/PollQ.o \
 ./src/sw/task/QPeek.o \
 ./src/sw/task/blocktim.o \
 ./src/sw/task/flash.o \
-./src/sw/task/flop.o \
 ./src/sw/task/integer.o \
 ./src/sw/task/recmutex.o \
-./src/sw/task/semtest.o \
-./src/sw/task/sw_task_glcd.o \
 ./src/sw/task/uIP_Task.o 
 
 C_DEPS += \
 ./src/sw/task/BlockQ.d \
 ./src/sw/task/GenQTest.d \
-./src/sw/task/PollQ.d \
 ./src/sw/task/QPeek.d \
 ./src/sw/task/blocktim.d \
 ./src/sw/task/flash.d \
-./src/sw/task/flop.d \
 ./src/sw/task/integer.d \
 ./src/sw/task/recmutex.d \
-./src/sw/task/semtest.d \
-./src/sw/task/sw_task_glcd.d \
 ./src/sw/task/uIP_Task.d 
 
 

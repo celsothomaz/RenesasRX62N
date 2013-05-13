@@ -5,7 +5,7 @@
  *      Author: celso
  */
 
-#include "../fw_config.h"
+#include "sw_config.h"
 /*
  * Init clock
  *

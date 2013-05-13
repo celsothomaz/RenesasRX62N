@@ -10,8 +10,6 @@
 
 #include "iodefine.h"
 
-#include "yrdkrx62ndef.h"
-
 #include "Clock/fw_clock.h"
 #include "SCI/fw_sci2.h"
 #include "SPI/fw_spi.h"
@@ -25,6 +23,7 @@
 #include "LED/fw_led.h"
 #include "SW/fw_sw.h"
 #include "RTC/fw_rtc.h"
+#include "IIC/fw_iic.h"
 
 #define DBG(x) transmit_text(x)
 

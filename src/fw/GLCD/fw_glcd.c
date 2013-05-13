@@ -5,7 +5,7 @@
  *      Author: celso
  */
 
-#include "../fw_config.h"
+#include "sw_config.h"
 
 unsigned char fw_glcd_display[96][8];
 unsigned char fw_glcd_actual_pos_x = 0;

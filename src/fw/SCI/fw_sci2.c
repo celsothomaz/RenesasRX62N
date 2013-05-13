@@ -5,7 +5,7 @@
  *      Author: celso
  */
 
-#include "fw_config.h"
+#include "sw_config.h"
 
 void fw_sci2_init(void){
 	MSTP(SCI2) = 0;

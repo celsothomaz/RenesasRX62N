@@ -10,6 +10,8 @@ RM := rm -rf *.lst *.lis *.lpp *.map
 -include sources.mk
 -include src/sw/webserver/subdir.mk
 -include src/sw/task/subdir.mk
+-include src/sw/task/IIC/subdir.mk
+-include src/sw/task/GLCD/subdir.mk
 -include src/sw/MemMang/subdir.mk
 -include src/sw/FreeTCPIP/subdir.mk
 -include src/sw/FreeTCPIP/apps/httpd/subdir.mk
@@ -25,6 +27,7 @@ RM := rm -rf *.lst *.lis *.lpp *.map
 -include src/fw/RTC/subdir.mk
 -include src/fw/LED/subdir.mk
 -include src/fw/IRQ/subdir.mk
+-include src/fw/IIC/subdir.mk
 -include src/fw/GLCD/subdir.mk
 -include src/fw/ETH/subdir.mk
 -include src/fw/Clock/subdir.mk

@@ -8,14 +8,12 @@ ASM_SRCS += \
 
 C_SRCS += \
 ..\src/fw/fw_setup.c \
-..\src/fw/hwinit.c \
 ..\src/fw/hwsetup.c \
 ..\src/fw/inthandler.c \
 ..\src/fw/vects.c 
 
 OBJS += \
 ./src/fw/fw_setup.o \
-./src/fw/hwinit.o \
 ./src/fw/hwsetup.o \
 ./src/fw/inthandler.o \
 ./src/fw/start.o \
@@ -23,7 +21,6 @@ OBJS += \
 
 C_DEPS += \
 ./src/fw/fw_setup.d \
-./src/fw/hwinit.d \
 ./src/fw/hwsetup.d \
 ./src/fw/inthandler.d \
 ./src/fw/vects.d 
